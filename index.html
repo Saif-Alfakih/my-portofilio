@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-translate="title">Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+ <!-- في قسم الـ header -->
+<header class="header">
+    <div class="logo"><span>S</span> Al-Fakih</div>
+    <ul class="navlist" id="navlist">
+      <li><a href="#home" style="--i:1;" data-translate="nav-home">Home</a></li>
+      <li><a href="#about" style="--i:2;" data-translate="nav-about">About</a></li>
+      <li><a href="#services" style="--i:3;" data-translate="nav-services">Services</a></li>
+      <li><a href="#skills" style="--i:4;" data-translate="nav-skills">Skills</a></li>
+      <li><a href="#portfolio" style="--i:5;" data-translate="nav-portfolio">Portfolio</a></li>
+      <li><a href="#contact" style="--i:6;" data-translate="nav-contact">Contact</a></li>
+    </ul>
+    
+    <!-- تأكد من أنك تستخدم data-translate لكل العناصر القابلة للترجمة -->
+
+    <div id="menu-icon" class="bx bx-menu"></div>
+</header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-content scroll-scale">
+      <h1 data-translate="home-title">Hi, I'm Saif Alaslam Alfakih</h1>
+      <div class="change-text">
+        <h3 data-translate="home-subtitle">and I specialize in</h3>
+        <h3>
+          <span class="words"></span>
+        </h3>
+      </div>
+      <p data-translate="home-desc">Welcome to my professional portfolio...</p>
+      <div class="info-box"> 
+        <div class="email-info">
+          <h5 data-translate="email-label">Email:</h5>
+          <span>saifalfakih452@gmail.com</span>
+        </div>
+        <div class="behance-info">
+          <h5 data-translate="behance-label">Behance:</h5>
+          <span>saif-alaslam-alfakih</span>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="saifcv.pdf" class="btn" data-translate="download-cv" download>Download CV</a>
+        <a href="#contact" class="btn" data-translate="hire-me" aria-label="Hire Me Now">Hire Me Now</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/saif-alaslam-a-7ba988232?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIEi7B8NnSPOdqX%2Fp2L0D0A%3D%3D" target="_blank" ><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100078298180422" target="_blank" ><i class='bx bxl-facebook-square'></i></a>
+        <a href="https://wa.me/967778384862" target="_blank" ><i class='bx bxl-whatsapp-square'></i></a>
+        <a href="mailto:saifalfakih452@gmail.com"><i class='bx bxl-gmail'></i></a>
+      </div>
+    </div>
+    <div class="home-image scroll-scale">
+  <div class="img-wrapper">
+    <div class="img-glow"></div>
+    <img src="images/my pic.png" alt="Profile picture of Saif Alaslam Alfakih" class="profile-img">
+  
+    </div>
+  </div>
+</div>
+</section>
+
+  <!-- about Section -->
+  <section id="about" class="about">
+    <div class="img-about scroll-scale">
+      <img src="images/aboutpic.png" alt="My Picture">
+      <div class="info-about1">
+        <span>10+</span>
+        <p data-translate="years-exp">years of experience</p>
+      </div>
+      <div class="info-about2">
+        <span>150+</span>
+        <p data-translate="projects-completed">projects completed</p>
+      </div>
+      <div class="info-about3">
+        <span>200+</span>
+        <p data-translate="happy-clients">happy clients</p>
+      </div>
+    </div>
+    <div class="about-content scroll-scale">
+      <span data-translate="about-intro">Let me introduce myself</span>
+      <h2 data-translate="about-title">About Me</h2>
+      <h3 data-translate="about-subtitle">Multidisciplinary professional with expertise in digital solutions</h3>
+      <p data-translate="about-desc">With over 10 years of experience in digital fields...</p>
+      <div class="btn-box">
+        <a href="#" class="btn" data-translate="read-more">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="main-text scroll-scale">
+      <span data-translate="services-subtitle">what i will do for you</span>
+      <h2 data-translate="services-title">My Services</h2>
+    </div>
+    <div class="services-section scroll-bottom">
+      <div class="service-box">
+        <i class='bx bxs-bar-chart-alt-2 service-icon'></i>
+        <h3 data-translate="digital-marketing">Digital Marketing</h3>
+        <p data-translate="digital-marketing-desc">Comprehensive digital marketing strategies...</p>
+        <div class="btn-box service-btn">
+          <a href="#" class="btn" data-translate="read-more">Read more</a>
+        </div>
+      </div>
+      <div class="service-box">
+        <i class='bx bx-code-alt service-icon'></i>
+        <h3 data-translate="web-programming">Web Programming</h3>
+        <p data-translate="web-programming-desc">Custom web development services...</p>
+        <div class="btn-box service-btn">
+          <a href="#" class="btn" data-translate="read-more">Read more</a>
+        </div>
+      </div>
+      <div class="service-box">
+        <i class='bx bx-network-chart service-icon'></i>
+        <h3 data-translate="network-solutions">Network Solutions</h3>
+        <p data-translate="network-solutions-desc">Reliable network infrastructure...</p>
+        <div class="btn-box service-btn">
+          <a href="#" class="btn" data-translate="read-more">Read more</a>
+        </div>
+      </div>
+      <div class="service-box">
+        <i class='bx bx-data service-icon'></i>
+        <h3 data-translate="data-analysis">Data Analysis</h3>
+        <p data-translate="data-analysis-desc">Transforming raw data into actionable insights...</p>
+        <div class="btn-box service-btn">
+          <a href="#" class="btn" data-translate="read-more">Read more</a>
+        </div>
+      </div>
+      <div class="service-box">
+        <i class='bx bxs-paint service-icon'></i>
+        <h3 data-translate="graphic-design">Graphic Design</h3>
+        <p data-translate="graphic-design-desc">Creative visual solutions for branding...</p>
+        <div class="btn-box service-btn">
+          <a href="#" class="btn" data-translate="read-more">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill Section -->
+  <section id="skills" class="skills">
+    <div class="main-text scroll-scale">
+      <span data-translate="skills-subtitle">technical and professional</span>
+      <h2 data-translate="skills-title">My Skills</h2>
+    </div>
+<div class="skill-main">
+    <!-- Technical Skills Column -->
+    <div class="skill-left scroll-scale">
+      <h3 data-translate="skills-technical">Technical Skills</h3>
+      
+      <div class="skill-bar">
+        <div class="info">
+          <p>Html</p>
+          <p>72%</p>
+        </div>
+        <div class="bar">
+          <span class="html"></span>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="info">
+          <p>Figma</p>
+          <p>90%</p>
+        </div>
+        <div class="bar">
+          <span class="figma"></span>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="info">
+          <p>JavaScript</p>
+          <p>80%</p>
+        </div>
+        <div class="bar">
+          <span class="javascript"></span>
+        </div>
+      </div>
+      
+      <div class="skill-bar">
+        <div class="info">
+          <p>CSS</p>
+          <p>62%</p>
+        </div>
+        <div class="bar">
+          <span class="css"></span>
+        </div>
+      </div>
+    </div>
+
+   <!-- Professional Skills Column -->
+<div class="skill-right scroll-scale">
+  <h3 data-translate="skills-professional">Professional Skills</h3>
+  <div class="professional">
+    <div class="box">
+      <div class="circle" data-dots="80" data-percent="90"></div>
+      <div class="text">
+        <big>90%</big>
+        <small data-translate="skill-teamwork">Team Work</small>
+      </div>
+    </div>
+    <div class="box">
+      <div class="circle" data-dots="80" data-percent="80"></div>
+      <div class="text">
+        <big>80%</big>
+        <small data-translate="skill-problemsolving">Problem Solving</small>
+
+      </div>
+    </div>
+    <div class="box">
+      <div class="circle" data-dots="80" data-percent="70"></div>
+      <div class="text">
+        <big>70%</big>
+        <small data-translate="skill-time-management">Time Management</small>
+      </div>
+    </div>
+    <div class="box">
+      <div class="circle" data-dots="80" data-percent="85"></div>
+      <div class="text">
+        <big>85%</big>
+        <small data-translate="skill-creativity">Creativity</small>
+
+        <small>Creativity</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="main-text scroll-scale">
+      <span data-translate="portfolio-subtitle">my recent work</span>
+      <h2 data-translate="portfolio-title">My Portfolio</h2>
+    </div>
+    <div class="container">
+      <div class="fillter-buttons scroll-scale">
+        <button class="button" data-filter="all" data-translate="filter-all">All</button>
+        <button class="button" data-filter=".digital" data-translate="filter-digital">Digital Marketing</button>
+        <button class="button" data-filter=".web" data-translate="filter-web">Web Projects</button>
+        <button class="button" data-filter=".data" data-translate="filter-data">Data Analysis</button>
+        <button class="button" data-filter=".graphics" data-translate="filter-graphics">Graphics Design</button>
+      </div>
+    </div>
+    <div class="portfolio-gallery scroll-bottom">
+      <!-- Digital Marketing Project -->
+      <div class="port-box mix digital">
+        <div class="port-image">
+          <img src="images/di.jpeg" alt="Digital marketing project">
+        </div>
+        <div class="port-content">
+          <h3 data-translate="project1-title">E-commerce Campaign</h3>
+          <p data-translate="project1-desc">Digital marketing campaign for fashion e-commerce store</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <!-- Web Programming Project -->
+      <div class="port-box mix web">
+        <div class="port-image">
+          <img src="images/web.jpg" alt="Web programming project">
+        </div>
+        <div class="port-content">
+          <h3 data-translate="project2-title">Portfolio Website</h3>
+          <p data-translate="project2-desc">Custom portfolio website for a creative professional</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <!-- Network Project -->
+      <div class="port-box mix network">
+        <div class="port-image">
+          <img src="images/net.jpg" alt="Network project">
+        </div>
+        <div class="port-content">
+          <h3 data-translate="project3-title">Network Infrastructure</h3>
+          <p data-translate="project3-desc">Setup and optimization of corporate network infrastructure</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <!-- Data Analysis Project -->
+      <div class="port-box mix data">
+        <div class="port-image">
+          <img src="images/data.jpg" alt="Data analysis project">
+        </div>
+        <div class="port-content">
+          <h3 data-translate="project4-title">Sales Data Insights</h3>
+          <p data-translate="project4-desc">Comprehensive analysis of sales data for a retail company</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <!-- Graphics Design Project -->
+      <div class="port-box mix graphics">
+        <div class="port-image">
+          <img src="images/graphic.jpg" alt="Graphics design project">
+        </div>
+        <div class="port-content">
+          <h3 data-translate="project5-title">Brand Identity Design</h3>
+          <p data-translate="project5-desc">Creative branding and logo design for a startup</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="content">
+    <div class="main-text scroll-scale">
+      <span data-translate="contact-subtitle">ask me question</span>
+      <h2 data-translate="contact-title">Contact Me</h2>
+    </div>
+
+    <form id="contact-form" action="https://formspree.io/f/xgvkpoej" method="POST" class="scroll-bottom">
+  <input type="text" name="name" placeholder="Your Name" required data-translate="name-placeholder">
+  <input type="email" name="email" placeholder="Your Email" required data-translate="email-placeholder">
+  <input type="text" name="address" placeholder="Your Address" data-translate="address-placeholder">
+  <input type="text" name="phone" placeholder="Your Phone Number" data-translate="phone-placeholder">
+  <textarea name="message" cols="30" rows="10" placeholder="Your message" required data-translate="message-placeholder"></textarea>
+  <div class="btn-box formBtn">
+    <button type="submit" class="btn" data-translate="send-message">Send Message</button>
+  </div>
+  <p id="form-status" style="margin-top: 15px; color: green;"></p>
+  <div id="form-message" class="form-message" data-translate="form-success" style="display: none;">
+  Message sent successfully!
+</div>
+
+</form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="scroll-scale">&copy; <span id="current-year"></span> Saif Alaslam Alfakih. <span data-translate="copyright">All rights reserved</span>.</p>
+    <a href="#home" class="scroll-top"><i class='bx bxs-up-arrow-alt'></i></a>
+  </footer>
+
+  <script src="mixitup.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="js/lang.js" defer></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  
+  <button id="language-toggle" class="language-toggle" data-translate="toggle-lang">English</button>
+
+
+
+
+</body>
+</html>
