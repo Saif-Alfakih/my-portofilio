@@ -13,7 +13,7 @@
         
         // الصفحة الرئيسية
         "home-title": "Hi, I'm Saif Alaslam Alfakih",
-        "home-subtitle": "and I specialize in",
+        "home-subtitle": "I specialize in",
         "home-words": ["Digital Marketing", "Web Programming", "Network", "Data Analysis", "Graphic Design"],
         "home-desc": "Welcome to my professional portfolio. I offer integrated digital solutions combining technical expertise with creative vision to deliver exceptional results.",
         "email-label": "Email:",
