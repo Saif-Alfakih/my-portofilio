@@ -153,6 +153,7 @@ if (skillsSection) {
             if (entry.isIntersecting) {
                 activateSkillCircles();   // ← الدوائر
                 animateTechnicalBars();   // ← الخطوط
+                updateSkillsTranslation(); // ← تحديث النصوص داخل المهارات المهنية
             } else {
                 // إعادة تعيين الدوائر
                 document.querySelectorAll('.circle .points.marked')
@@ -167,6 +168,47 @@ if (skillsSection) {
 
     observer.observe(skillsSection);
 }
+
+// دالة لتحديث ترجمة المهارات المهنية عند تغيير اللغة
+function updateSkillsTranslation() {
+    const skillsTranslation = {
+        en: {
+            teamwork: "Team Work",
+            "problem-solving": "Problem Solving",
+            "time-management": "Time Management",
+            creativity: "Creativity"
+        },
+        ar: {
+            teamwork: "العمل الجماعي",
+            "problem-solving": "حل المشكلات",
+            "time-management": "إدارة الوقت",
+            creativity: "الإبداع"
+        }
+    };
+
+    const currentLang = document.documentElement.lang || 'en'; // اللغة الحالية
+
+    document.querySelectorAll('.box .text small').forEach(elem => {
+        const key = elem.getAttribute('data-translate')?.replace("skill-", "");
+        if (key && skillsTranslation[currentLang] && skillsTranslation[currentLang][key]) {
+            elem.textContent = skillsTranslation[currentLang][key];
+        }
+    });
+}
+
+// تحديث المهارات عند تغيير اللغة (لو عندك زر تغيير اللغة)
+document.querySelectorAll('.lang-switcher button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        setTimeout(updateSkillsTranslation, 300); // لتحديث المهارات بعد الترجمة
+    });
+});
+
+
+
+
+
+
+
 
 
 // فلترة المعرض
@@ -232,12 +274,13 @@ scrollBottm.forEach((el) => observer.observe(el));
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el) => observer.observe(el));
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const messageBox = document.getElementById("form-message");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // منع الإرسال الافتراضي
+    e.preventDefault();
 
     const formData = new FormData(form);
 
@@ -261,14 +304,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showMessage() {
     const currentLang = document.documentElement.lang || "en";
-    const messageBox = document.getElementById("form-message");
+    const successMessage = translations[currentLang]["form-success"];
 
-    if (currentLang === "ar") {
-      messageBox.textContent = "تم إرسال الرسالة بنجاح!";
-    } else {
-      messageBox.textContent = "Message sent successfully!";
-    }
-
+    messageBox.textContent = successMessage;
     messageBox.style.display = "block";
 
     setTimeout(() => {
@@ -276,6 +314,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   }
 });
+
+
 
 
 document.addEventListener("languageChanged", () => {
@@ -290,3 +330,4 @@ document.addEventListener("languageChanged", () => {
         imgWrapper.classList.add("animate-profile");
     }, 50);
 });
+

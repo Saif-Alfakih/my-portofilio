@@ -11,7 +11,8 @@
 
  <!-- في قسم الـ header -->
 <header class="header">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <div class="logo">
     <img src="images/lo.svg" alt="Saif Al-Fakih Logo">
   </div>
@@ -27,6 +28,7 @@
     <!-- تأكد من أنك تستخدم data-translate لكل العناصر القابلة للترجمة -->
 
     <div id="menu-icon" class="bx bx-menu"></div>
+
 </header>
 
   <!-- Home Section -->
@@ -47,12 +49,12 @@
         </div>
         <div class="behance-info">
           <h5 data-translate="behance-label">Behance:</h5>
-          <span>saif-alaslam-alfakih</span>
+          <span>SaifAlaslam-Al-fakih</span>
         </div>
       </div>
       <div class="btn-box">
         <a href="saifCV.pdf" class="btn" data-translate="download-cv" download>Download CV</a>
-        <a href="#contact" class="btn" data-translate="hire-me" aria-label="Hire Me Now">Hire Me Now</a>
+        <a href="https://www.behance.net/SaifAlaslam-Al-fakih" class="btn" target="_blank" rel="noopener" data-translate="hire-me" aria-label="Hire Me Now">Hire Me Now</a>
       </div>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/saif-alaslam-a-7ba988232?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIEi7B8NnSPOdqX%2Fp2L0D0A%3D%3D" target="_blank" ><i class='bx bxl-linkedin-square'></i></a>
@@ -162,7 +164,7 @@
       
       <div class="skill-bar">
         <div class="info">
-          <p>Html</p>
+          <p data-translate="skill-html">Html</p>
           <p>71%</p>
         </div>
         <div class="bar">
@@ -172,7 +174,7 @@
 
       <div class="skill-bar">
         <div class="info">
-          <p>Figma</p>
+          <p data-translate="skill-figma">Figma</p>
           <p>90%</p>
         </div>
         <div class="bar">
@@ -182,7 +184,7 @@
 
       <div class="skill-bar">
         <div class="info">
-          <p>JavaScript</p>
+          <p data-translate="skill-javascript">JavaScript</p>
           <p>80%</p>
         </div>
         <div class="bar">
@@ -192,7 +194,7 @@
       
       <div class="skill-bar">
         <div class="info">
-          <p>CSS</p>
+          <p data-translate="skill-css">CSS</p>
           <p>62%</p>
         </div>
         <div class="bar">
@@ -233,7 +235,6 @@
         <big>85%</big>
         <small data-translate="skill-creativity">Creativity</small>
 
-        <small>Creativity</small>
       </div>
     </div>
   </div>
@@ -322,49 +323,44 @@
     </div>
   </section>
   </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="content">
-    <div class="main-text scroll-scale">
-      <span data-translate="contact-subtitle">ask me question</span>
-      <h2 data-translate="contact-title">Contact Me</h2>
-    </div>
-
-    <form id="contact-form" action="https://formspree.io/f/xgvkpoej" method="POST" class="scroll-bottom">
-  <input type="text" name="name" placeholder="Your Name" required data-translate="name-placeholder">
-  <input type="email" name="email" placeholder="Your Email" required data-translate="email-placeholder">
-  <input type="text" name="address" placeholder="Your Address" data-translate="address-placeholder">
-  <input type="text" name="phone" placeholder="Your Phone Number" data-translate="phone-placeholder">
-  <textarea name="message" cols="30" rows="10" placeholder="Your message" required data-translate="message-placeholder"></textarea>
-  <div class="btn-box formBtn">
-    <button type="submit" class="btn" data-translate="send-message">Send Message</button>
+<!-- Contact Section -->
+<section id="contact" class="content">
+  <div class="main-text scroll-scale">
+    <span data-translate="contact-subtitle">ask me question</span>
+    <h2 data-translate="contact-title">Contact Me</h2>
   </div>
-  <p id="form-status" style="margin-top: 15px; color: green;"></p>
-  <div id="form-message" class="form-message" data-translate="form-success" style="display: none;">
-  Message sent successfully!
-</div>
 
-</form>
+  <form id="contact-form" action="https://formspree.io/f/xgvkpoej" method="POST" class="scroll-bottom">
+    <input type="text" name="name" placeholder="Your Name" required data-translate-placeholder="name-placeholder">
+    <input type="email" name="email" placeholder="Your Email" required data-translate-placeholder="email-placeholder">
+    <input type="text" name="address" placeholder="Your Address" data-translate-placeholder="address-placeholder">
+    <input type="text" name="phone" placeholder="Your Phone Number" data-translate-placeholder="phone-placeholder">
+    <textarea name="message" cols="30" rows="10" placeholder="Your message" required data-translate-placeholder="message-placeholder"></textarea>
+    
+    <div class="btn-box formBtn">
+      <button type="submit" class="btn" data-translate="send-message">Send Message</button>
+    </div>
+    
+    <p id="form-status" style="margin-top: 15px; color: green;"></p>
+    <div id="form-message" class="form-message" style="display: none;" data-translate="form-success">
+      Message sent successfully!
+    </div>
+  </form>
+</section>
 
-  </section>
+<!-- Footer -->
+<footer>
+  <p class="scroll-scale">&copy; <span id="current-year"></span> Saif Alaslam Alfakih. <span data-translate="copyright">All rights reserved</span>.</p>
+  <a href="#home" class="scroll-top"><i class='bx bxs-up-arrow-alt'></i></a>
+</footer>
 
-  <!-- Footer -->
-  <footer>
-    <p class="scroll-scale">&copy; <span id="current-year"></span> Saif Alaslam Alfakih. <span data-translate="copyright">All rights reserved</span>.</p>
-    <a href="#home" class="scroll-top"><i class='bx bxs-up-arrow-alt'></i></a>
-  </footer>
-
-  <script src="mixitup.min.js" defer></script>
-  <script src="script.js" defer></script>
-  <script src="js/lang.js" defer></script>
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
-  
-  <button id="language-toggle" class="language-toggle" data-translate="toggle-lang">English</button>
+<button id="language-toggle" class="language-toggle">English</button>
 
 
+<script src="mixitup.min.js" defer></script>
+<script src="script.js" defer></script>
+<script src="js/lang.js" defer></script>
 
-
-</body>
-</html>
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

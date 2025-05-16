@@ -1,7 +1,6 @@
 // ملف الترجمات (js/lang.js)
 
 // js/lang.js
-document.addEventListener('DOMContentLoaded', function() {
     const translations = {
     "en": {
         // التنقل
@@ -47,15 +46,18 @@ document.addEventListener('DOMContentLoaded', function() {
         "graphic-design-desc": "Creative visual solutions for branding, marketing materials, and digital media.",
         
         // المهارات
+    
+ 
         "skills-title": "My Skills",
-        "skills-subtitle": "Technical and professional competencies",
-        "technical-skills": "Technical Skills",
-        "professional-skills": "Professional Skills",
-        "teamwork": "Teamwork",
-        "problem-solving": "Problem Solving",
-        "time-management": "Time Management",
-        "creativity": "Creativity",
-        
+        "skills-subtitle": "Technical and Professional",
+        "skills-technical": "Technical Skills",
+        "skills-professional": "Professional Skills",
+        "skill-teamwork": "Team Work",
+        "skill-problemsolving": "Problem Solving",
+        "skill-time-management": "Time Management",
+        "skill-creativity": "Creativity",
+
+
         // الأعمال
         "portfolio-title": "My Portfolio",
         "portfolio-subtitle": "Recent professional projects",
@@ -75,8 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
         "project5-desc": "Complete branding package for startup",
         "project6-title": "Dashboard Design",
         "project6-desc": "Interactive data visualization dashboard",
-        
-        // التواصل
+       
+       
+        // قسم التواصل   
         "contact-title": "Contact Me",
         "contact-subtitle": "Get in touch",
         "name-placeholder": "Your Name",
@@ -85,7 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
         "phone-placeholder": "Your Phone",
         "message-placeholder": "Your Message",
         "send-message": "Send Message",
-        
+        "form-success": "Message sent successfully!",
+
+
         // حقوق النشر
         "copyright": "All rights reserved"
     },
@@ -133,14 +138,19 @@ document.addEventListener('DOMContentLoaded', function() {
         "graphic-design-desc": "حلول بصرية إبداعية للعلامات التجارية ومواد التسويق والوسائط الرقمية.",
         
         // المهارات
+        "skill-html": "إتش تي إم إل",
+        "skill-css": "سي إس إس",
+        "skill-javascript": "جافا سكريبت",
+        "skill-figma": "فيجما",
+        "skill-teamwork": "العمل الجماعي",
+        "skill-problemsolving": "حل المشكلات",
+        "skill-time-management": "إدارة الوقت",
+        "skill-creativity": "الإبداع",
         "skills-title": "مهاراتي",
         "skills-subtitle": "الكفاءات التقنية والمهنية",
-        "technical-skills": "المهارات التقنية",
-        "professional-skills": "المهارات المهنية",
-        "teamwork": "العمل الجماعي",
-        "problem-solving": "حل المشكلات",
-        "time-management": "إدارة الوقت",
-        "creativity": "الإبداع",
+        "skills-technical": "المهارات التقنية",
+        "skills-professional": "المهارات المهنية",
+
         
         // الأعمال
         "portfolio-title": "أعمالي",
@@ -149,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "filter-digital": "التسويق الرقمي",
         "filter-web": "مشاريع الويب",
         "filter-data": "تحليل البيانات",
+        "filter-graphics": "تصميم جرافيكس",
         "project1-title": "حملة تجارة إلكترونية",
         "project1-desc": "حملة تسويق رقمي لمتجر أزياء إلكتروني",
         "project2-title": "موقع شركة",
@@ -171,66 +182,76 @@ document.addEventListener('DOMContentLoaded', function() {
         "phone-placeholder": "هاتفك",
         "message-placeholder": "رسالتك",
         "send-message": "إرسال الرسالة",
-        
+        "form-success": "تم إرسال الرسالة بنجاح!",
         // حقوق النشر
         "copyright": "جميع الحقوق محفوظة"
     }
 };
 
 
-    let currentLang = document.documentElement.lang || 'en';
+   let currentLang = document.documentElement.lang || 'en';
 
-    function applyTranslations() {
-        document.querySelectorAll('[data-translate]').forEach(el => {
-            const key = el.getAttribute('data-translate');
-            el.textContent = translations[currentLang][key] || el.textContent;
-        });
+function applyTranslations() {
+    // ترجمة النصوص داخل العناصر التي تحمل data-translate
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[currentLang] && translations[currentLang][key]) {
+            el.textContent = translations[currentLang][key];
+        }
+    });
 
-        // تحديث العناصر الخاصة
-        document.getElementById('language-toggle').textContent = currentLang === 'en' ? 'العربية' : 'English';
-        
-        // تحديث العناصر الأخرى مثل placeholders إذا لزم الأمر
-        document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
-            const key = el.getAttribute('data-translate-placeholder');
-            el.placeholder = translations[currentLang][key] || el.placeholder;
-        });
+    // ترجمة الـ placeholders داخل العناصر التي تحمل data-translate-placeholder
+    document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-translate-placeholder');
+        if (translations[currentLang] && translations[currentLang][key]) {
+            el.placeholder = translations[currentLang][key];
+        }
+    });
+
+    // تحديث زر تبديل اللغة
+    const langToggleBtn = document.getElementById('language-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.textContent = currentLang === 'en' ? 'العربية' : 'English';
     }
+}
 
-    function updateDirection() {
-        document.documentElement.lang = currentLang;
-        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-        
-        // إضافة أو إزالة class للتحكم في الاتجاه
-        document.body.classList.toggle('rtl', currentLang === 'ar');
-        document.body.classList.toggle('ltr', currentLang !== 'ar');
-    }
+function updateDirection() {
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
-  
-    function toggleLanguage() {
-        currentLang = currentLang === 'en' ? 'ar' : 'en';
-        localStorage.setItem('preferredLang', currentLang);
-        applyTranslations();
-        updateDirection();
+    // ضبط الـ class على body للتحكم بالتصميم حسب الاتجاه
+    document.body.classList.toggle('rtl', currentLang === 'ar');
+    document.body.classList.toggle('ltr', currentLang !== 'ar');
+}
 
-    // تحديث الكلمات المتحركة عند تغيير اللغة
+function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
+    localStorage.setItem('preferredLang', currentLang);
+    applyTranslations();
+    updateDirection();
+
+    // تحديث الكلمات المتحركة عند تغيير اللغة إن وجدت
     if (typeof updateAnimatedWords === 'function') {
         updateAnimatedWords(translations[currentLang]["home-words"]);
     }
 }
 
-
-    // التهيئة الأولية
+// التهيئة الأولية عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang');
     if (savedLang) {
         currentLang = savedLang;
     }
 
-    document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+    const langToggleBtn = document.getElementById('language-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', toggleLanguage);
+    }
+
     applyTranslations();
     updateDirection();
 
     if (typeof updateAnimatedWords === 'function') {
-    updateAnimatedWords(translations[currentLang]["home-words"]);
-}
-
+        updateAnimatedWords(translations[currentLang]["home-words"]);
+    }
 });

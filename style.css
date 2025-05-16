@@ -1007,7 +1007,7 @@ footer a i {
    :root{
       --big-font:2.2rem;
       --normal-font:1.8rem;
-      --neon-box-shadow:0 0 .8rem #12f7ff;
+      --neon-box-shadow:0 0 .8rem #ffde00;
       --h2-font:3rem;
    }
    .home-content h1{
@@ -1025,6 +1025,7 @@ footer a i {
    #menu-icon.bx-x {
       transform: rotate(-180deg);
    }
+   
  .navlist {
     transition: all 0.3s ease;
     position: fixed;
@@ -1032,7 +1033,7 @@ footer a i {
     left: 0;
     width: 100%;
     height: calc(100vh - 70px);
-    background: rgba(37, 8, 33, 0.95); /* شفافية للخلفية */
+    background: #0000006d; /* شفافية للخلفية */
     backdrop-filter: blur(10px); /* تأثير ضبابي */
     flex-direction: column;
     opacity: 0;
