@@ -47,24 +47,37 @@ function buildWordsFromArray(wordArray) {
 
 function changeText() {
     let currentWord = words[currentWordIndex];
-    let nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
 
-    Array.from(currentWord.children).forEach((letter, i) => {
-        setTimeout(() => {
-            letter.className = "letter out";
-        }, i * 80);
-    });
+    // Check if currentWord is defined before trying to access its children
+    if (currentWord) {
+        let nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
 
-    nextWord.style.opacity = "1";
-    Array.from(nextWord.children).forEach((letter, i) => {
-        letter.className = "letter behind";
-        setTimeout(() => {
-            letter.className = "letter in";
-        }, 340 + (i * 80));
-    });
+        Array.from(currentWord.children).forEach((letter, i) => {
+            setTimeout(() => {
+                letter.className = "letter out";
+            }, i * 80);
+        });
 
-    currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+        // Also check if nextWord is defined before accessing its properties
+        if (nextWord) {
+            nextWord.style.opacity = "1";
+            Array.from(nextWord.children).forEach((letter, i) => {
+                letter.className = "letter behind";
+                setTimeout(() => {
+                    letter.className = "letter in";
+                }, 340 + (i * 80));
+            });
+        }
+
+        currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+    } else {
+        console.error("currentWord is undefined. Check the 'words' array and 'currentWordIndex'.");
+        // You might want to add logic here to handle the undefined case,
+        // for example, resetting currentWordIndex or stopping the animation.
+    }
 }
+
+// تحديث النصوص مع تبديل اللغة
 
 // تحديث النصوص مع تبديل اللغة
 function updateAnimatedWords(newWords) {
