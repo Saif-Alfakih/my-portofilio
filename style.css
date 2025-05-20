@@ -8,24 +8,24 @@
     scroll-behavior: smooth;
 }
 :root {
-  --text-color: #E5E7EB; /* رمادي فاتح للنصوص */
-  --hover-color: #F59E0B; /* أصفر ذهبي دافئ لجذب الانتباه */
-  --bg-color: #1F2937; /* رمادي داكن أنيق للخلفية الرئيسية */
-  --secon-bg-color: #4B5563; /* رمادي متوسط للأقسام الثانوية */
-  --big-font: 2.5rem;
-  --normal-font: 2rem;
-  --neon-box-shadow: 0 0 0.5rem #E5E7EB; /* ظل أخضر زمردي للأزرار */
-  --h2-font: 3rem;
+   --text-color: #E5E7EB; /* رمادي فاتح للنصوص */
+   --hover-color: #f1c420; /* أصفر ذهبي دافئ لجذب الانتباه */
+   --bg-color: #1F2937; /* رمادي داكن أنيق للخلفية الرئيسية */
+   --secon-bg-color: #4B5563; /* رمادي متوسط للأقسام الثانوية */
+   --big-font: 2.5rem;
+   --normal-font: 2rem;
+   --neon-box-shadow: 0 0 0.5rem #f1c420; /* ظل أخضر زمردي للأزرار */
+   --h2-font: 3rem;
 
-  --font-neon-text-shadow: 
-    0 0 10px rgba(16, 185, 129, 0.3),
-    0 0 20px rgba(16, 185, 129, 0.3),
-    0 0 30px rgba(16, 185, 129, 0.3),
-    0 0 40px rgba(16, 185, 129, 0.3),
-    0 0 70px rgba(245, 158, 11, 0.3),
-    0 0 80px rgba(245, 158, 11, 0.3),
-    0 0 100px rgba(245, 158, 11, 0.3),
-    0 0 150px rgba(245, 158, 11, 0.3);
+   --font-neon-text-shadow: 
+      0 0 10px rgba(241, 196, 32, 0.6),
+      0 0 20px rgba(241, 196, 32, 0.5),
+      0 0 30px rgba(241, 196, 32, 0.4),
+      0 0 40px rgba(241, 196, 32, 0.3),
+      0 0 70px rgba(241, 196, 32, 0.25),
+      0 0 80px rgba(241, 196, 32, 0.2),
+      0 0 100px rgba(241, 196, 32, 0.15),
+      0 0 150px rgba(241, 196, 32, 0.1);
 }
 
 
@@ -233,7 +233,7 @@ header {
 }
 
 .btn:hover {
-   background: #F59E0B;
+   background: #f1c420;
    transform: translateY(-3px);
    transition: all 0.3s;
 }
@@ -328,8 +328,8 @@ header {
    height: 110%;
    object-fit: cover;
    border-radius: 50%;
-   border: 5px solid #F59E0B;
-   box-shadow: 0 0 30px #F59E0B, 0 0 60px #E5E7EB;
+   border: 5px solid #f1c420;
+   box-shadow: 0 0 30px #f1c420, 0 0 60px #E5E7EB;
    transition: transform 0.4s ease;
    z-index: 2;
    position: relative;
@@ -350,7 +350,7 @@ header {
    width: 120%;
    height: 120%;
    border-radius: 50%;
-   background: radial-gradient(circle, rgba(18,247,255,0.4) 0%, rgba(0,0,0,0) 70%);
+   background: radial-gradient(circle, rgba(241, 196, 32, 0.6) 0%, rgba(0,0,0,0) 70%);
    animation: pulse-glow 3s infinite;
    z-index: 0;
 }
@@ -498,10 +498,10 @@ background: var(--secon-bg-color);
    transition: transform 0.4s ease, box-shadow 0.4s ease;
    flex: 1 1 260px;
    max-width: 300px;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+   box-shadow: 0 4px 12px rgba(241, 196, 32, 0.6);
    position: relative;
    overflow: hidden;
-   border: 1px solid rgba(255, 255, 255, 0.05);
+   border: 1px solid rgba(241, 196, 32, 0.6);
 }
 
 .service-box:hover {
@@ -521,7 +521,7 @@ background: var(--secon-bg-color);
    justify-content: center;
    font-size: 2rem;
    color: var(--hover-color);
-   box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+   box-shadow: 0 0 12px rgba(241, 196, 32, 0.6);
    transition: transform 0.3s ease, color 0.3s ease;
    border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -996,7 +996,7 @@ footer a i {
    :root{
       --big-font:2.2rem;
       --normal-font:1.8rem;
-      --neon-box-shadow:0 0 .8rem #E5E7EB;
+      --neon-box-shadow:0 0 .8rem #f1c420;
       --h2-font:3rem;
    }
    .home-content h1{
@@ -1122,7 +1122,7 @@ body.nav-open::after {
   font-weight: 600;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(135deg, #F59E0B, #8f94fb);
+  background: linear-gradient(135deg, #f1c420, #8f94fb);
   color: #1e1e1e;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -1130,7 +1130,7 @@ body.nav-open::after {
 }
 
 .language-toggle:hover {
-  background: linear-gradient(135deg, #F59E0B, #185a9d);
+  background: linear-gradient(135deg, #f1c420, #185a9d);
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
