@@ -56,6 +56,10 @@
         "skill-problemsolving": "Problem Solving",
         "skill-time-management": "Time Management",
         "skill-creativity": "Creativity",
+        "skill-html": "HTML",
+        "skill-css": "CSS",
+        "skill-javascript": "JavaScript",
+        "skill-figma": "Figma",
 
 
         // الأعمال

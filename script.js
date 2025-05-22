@@ -267,25 +267,38 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// parallax effect ...........................................
+// تأثير Scroll (parallax effect) لجميع الأقسام
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show-items");
-        } else {
-            entry.target.classList.remove("show-items");
-        }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-items");
+    } else {
+      entry.target.classList.remove("show-items");
+    }
+  });
+}, { threshold: 0.1 }); // لجعل التفاعل أكثر حساسية
+
+// راقب جميع العناصر ذات التأثير
+document.querySelectorAll(".scroll-scale, .scroll-bottom, .scroll-top").forEach(el => {
+  observer.observe(el);
 });
 
-const scrollScale = document.querySelectorAll(".scroll-scale");
-scrollScale.forEach((el) => observer.observe(el));
+// زر الرجوع لأعلى
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+const footer = document.getElementById("footer");
 
-const scrollBottm = document.querySelectorAll(".scroll-bottom");
-scrollBottm.forEach((el) => observer.observe(el));
+// راقب فقط الفوتر لإظهار الزر عنده
+const footerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+}, { threshold: 0.5 });
 
-const scrollTop = document.querySelectorAll(".scroll-top");
-scrollTop.forEach((el) => observer.observe(el));
+footerObserver.observe(footer);
 
 
 document.addEventListener("DOMContentLoaded", function () {

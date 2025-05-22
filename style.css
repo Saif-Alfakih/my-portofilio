@@ -893,32 +893,66 @@ footer a i {
    color: var(--secon-bg-color);
 }
 
-/* parallax effect .....................................................*/
-.scroll-scale{
-   opacity: 0;
-   transform: scale(.9);
-   transition: all 2s;
+/* parallax effect ..................................................... */
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 2s ease;
+}
+
+.scroll-bottom {
+  opacity: 1;
+  transform: translateY(300px);
+  transition: all 3s ease;
+}
+
+.scroll-top {
+  opacity: 0;
+  transform: translateY(-300px);
+  transition: all 3s ease;
+}
+
+.show-items {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll-to-top button design */
+.scroll-top {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: var(--hover-color);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 0.4s ease-in-out;
+  z-index: 10000;
+  pointer-events: none; /* يمنع الضغط قبل الظهور */
+}
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 
-.scroll-bottom{
-   opacity: 1;
-   transform: translateY(300px);
-   transition: 3s;
-
+.scroll-top:hover {
+  transform: scale(1.1);
 }
 
-.scroll-top{
-   opacity: 0;
-   transform: translateY(-300px);
-   transition: 3s;
-
+/* Arabic layout: move to left */
+body[lang="ar"] .scroll-top {
+  left: 20px;
+  right: auto;
 }
-.show-items{
-   opacity: 1;
-   transform: translateX(0);
-}
-
 
 
 
