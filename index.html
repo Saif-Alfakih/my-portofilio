@@ -6,6 +6,8 @@
   <title data-translate="title">Portfolio Website</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -72,11 +74,11 @@
   </div>
 </div>
 </section>
-
-  <!-- about Section -->
-  <section id="about" class="about">
-    <div class="img-about scroll-scale">
-      <img src="images/about.svg" alt="My Picture">
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="img-about scroll-scale">
+    <img src="images/about.svg" alt="My Picture" />
+    <div class="info-container">
       <div class="info-about1">
         <span>10+</span>
         <p data-translate="years-exp">years of experience</p>
@@ -90,16 +92,23 @@
         <p data-translate="happy-clients">happy clients</p>
       </div>
     </div>
-    <div class="about-content scroll-scale">
-      <span data-translate="about-intro">Let me introduce myself</span>
-      <h2 data-translate="about-title">About Me</h2>
-      <h3 data-translate="about-subtitle">Multidisciplinary professional with expertise in digital solutions</h3>
-      <p data-translate="about-desc">With over 10 years of experience in digital fields...</p>
-      <div class="btn-box">
-        <a href="#" class="btn" data-translate="read-more">Read More</a>
-      </div>
+  </div>
+
+  <div class="about-content scroll-scale">
+    <span data-translate="about-intro">Let me introduce myself</span>
+    <h2 data-translate="about-title">About Me</h2>
+    <h3 data-translate="about-subtitle">
+      Multidisciplinary professional with expertise in digital solutions
+    </h3>
+    <p data-translate="about-desc">
+      With over 10 years of experience in digital fields...
+    </p>
+    <div class="btn-box">
+      <a href="#" class="btn" data-translate="read-more">Read More</a>
+      <a href="#contact" class="btn" data-translate="contact-me">Contact Me</a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Services Section -->
   <section id="services" class="services">
@@ -355,6 +364,9 @@
 </footer>
 
 <button id="language-toggle" class="language-toggle">English</button>
+<a href="https://wa.me/967778384862" class="contact-float-btn" id="whatsapp-btn" target="_blank" aria-label="Contact via WhatsApp">
+<img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
 
 
 <script src="mixitup.min.js" defer></script>
@@ -364,3 +376,4 @@
 <script>
   document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
+

@@ -375,97 +375,131 @@ header {
 
 
 /* about section ---------------------------------------------------------------------------*/
-.about{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   grid-gap: 2em;
-background: var(--secon-bg-color);
-
-}
-.about .img-about{
-   text-align: center;
-   position: relative;
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 4rem 2rem;
+  background: var(--secon-bg-color);
 }
 
-.about .img-about img{
-  max-width: 400px;
-   height: auto;
+.about .img-about {
+  text-align: center;
+  position: relative;
+  flex: 1 1 300px;
 }
 
-.about-content span{
-   color: #fdfdfd;
-   font-size: .8rem;
-   font-weight: 200;
-   letter-spacing: 2px;
-   text-transform: uppercase;
+.about .img-about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
-.about-content h2{
-   color: var(--hover-color);
-   font-weight: 700;
-   font-size: var(--normal-font);
-   
-}
-
-.about-content h3{
-   font-weight: 600;
-   font-size: 1.5rem;
-   margin-bottom: .2rem;
-
-}
-.about-content p{
-   color: #fdfdfd;
-   font-weight: 300;
-   margin-bottom: 1.5rem;
-
-}
-.info-about1,
-.info-about2,
-.info-about3{
-   background: var(--bg-color);
-   font-size: .5rem;
-   position: absolute;
-   padding: 10px;
-   width: 90px;
-   height: 90px;
-   border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
-   display: block;
-   box-shadow: var(--neon-box-shadow);
-   z-index: 100;
-   border: 1px solid var(--hover-color);
-   outline: 2px solid var(--bg-color);
-   animation: morph 6s linear infinite;
-}
 .info-about1,
 .info-about2,
 .info-about3 {
-   position: absolute;
-   bottom: 15;
-   top: auto;
-   animation-delay: 0s;
+  background: var(--bg-color);
+  font-size: 0.6rem;
+  position: relative;
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+  display: inline-block;
+  margin: 10px 5px 0;
+  box-shadow: var(--neon-box-shadow);
+  border: 1px solid var(--hover-color);
+  outline: 2px solid var(--bg-color);
+  animation: morph 6s linear infinite;
+  text-align: center;
+  color: #fdfdfd;
 }
 
-.info-about1 {
-   left: 0;
+.img-about span {
+  color: var(--hover-color);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.info-about2 {
-   left: 50%;
-   transform: translateX(-50%);
-   animation-delay: 2s;
+.img-about .info-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  gap: 10px;
 }
 
-.info-about3 {
-   right: 0;
-   left: auto;
-   animation-delay: 4s;
+.about-content {
+  flex: 1 1 300px;
 }
-.img-about span{
-   color: var(--hover-color);
-   font-size: 1rem;
-   font-weight: 600;
+
+.about-content span {
+  color: #fdfdfd;
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
+
+.about-content h2 {
+  color: var(--hover-color);
+  font-weight: 700;
+  font-size: var(--normal-font);
+}
+
+.about-content h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.about-content p {
+  color: #fdfdfd;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.about-content .btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-box .btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-box .btn:hover {
+  background: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .img-about,
+  .about-content {
+    flex: 1 1 100%;
+  }
+
+  .about-content .btn-box {
+    justify-content: center;
+  }
+}
+
+
+
 /* services section ---------------------------------------------------------------------------*/
 .main-text {
    width: 100%;
@@ -1163,4 +1197,75 @@ html[dir="rtl"] .language-toggle {
   html[dir="rtl"] .language-toggle {
     left: 15px;
   }
+}
+
+.contact-float-btn {
+  position: fixed;
+  bottom: 20px;
+  padding: 15px;
+  font-size: 22px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: white;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, right 0.3s ease, left 0.3s ease;
+}
+
+.contact-float-btn:hover {
+  transform: scale(1.1);
+}
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+}
+
+/* تغيير مكان الزر حسب اللغة */
+body[lang="en"] #whatsapp-btn {
+  right: 20px;
+  left: auto;
+}
+
+body[lang="ar"] #whatsapp-btn {
+  left: 20px;
+  right: auto;
+}
+
+#whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* صورة الأيقونة داخل الزر */
+#whatsapp-btn img {
+  width: 28px;
+  height: 28px;
 }

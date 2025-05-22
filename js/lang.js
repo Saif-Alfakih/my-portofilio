@@ -255,3 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAnimatedWords(translations[currentLang]["home-words"]);
     }
 });
+
+  document.body.setAttribute("lang", lang);
+
