@@ -902,7 +902,7 @@ footer a i {
 
 .scroll-bottom {
   opacity: 1;
-  transform: translateY(300px);
+  transform: translateY(50px);
   transition: all 3s ease;
 }
 
