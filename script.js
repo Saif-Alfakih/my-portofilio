@@ -97,12 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-// قسم المهارات .........................
-
-
-
-
 function activateSkillCircles() {
     const circles = document.querySelectorAll('.circle');
     circles.forEach(elem => {
@@ -119,62 +113,66 @@ function activateSkillCircles() {
         elem.innerHTML = points;
 
         const pointsMarked = elem.querySelectorAll('.points');
-        for (let i = 0; i < percent; i++) {
-            setTimeout(() => {
-                pointsMarked[i].classList.add('marked');
-            }, i * 20);
-        }
+        markPointsSequentially(Array.from(pointsMarked).slice(0, percent));
+    });
+}
+
+function markPointsSequentially(points, index = 0) {
+    if (index >= points.length) return;
+    points[index].classList.add('marked');
+    requestAnimationFrame(() => {
+        setTimeout(() => markPointsSequentially(points, index + 1), 20);
     });
 }
 
 function animateTechnicalBars() {
     const bars = document.querySelectorAll('.skill-left .skill-bar .bar span');
 
+    const skillPercents = {
+        html: '72%',
+        css: '62%',
+        javascript: '80%',
+        figma: '90%'
+    };
+
     bars.forEach(bar => {
         const classList = Array.from(bar.classList);
         const skillClass = classList.find(cls => cls !== '');
-
         if (!skillClass) return;
-
-        // إعداد نسب المهارات حسب الكلاس
-        const skillPercents = {
-            html: '72%',
-            css: '62%',
-            javascript: '80%',
-            figma: '90%'
-        };
 
         const targetWidth = skillPercents[skillClass] || '0%';
 
-        // إعادة الضبط
+        bar.style.transition = 'none';
         bar.style.width = '0';
-        bar.style.transition = 'width 2s ease';
 
-        // إعادة التفعيل
-        setTimeout(() => {
+        requestAnimationFrame(() => {
+            bar.style.transition = 'width 2s ease';
             bar.style.width = targetWidth;
-        }, 100);
+        });
     });
 }
 
-// مراقبة القسم وتفعيل التأثيرات في كل مرة يظهر
+// مراقبة القسم وتفعيل/إعادة التهيئة عند الدخول والخروج
 const skillsSection = document.querySelector('#skills');
 
 if (skillsSection) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                activateSkillCircles();   // ← الدوائر
-                animateTechnicalBars();   // ← الخطوط
-                updateSkillsTranslation(); // ← تحديث النصوص داخل المهارات المهنية
+                activateSkillCircles();     // ← الدوائر
+                animateTechnicalBars();     // ← الخطوط
+                updateSkillsTranslation();  // ← الترجمة
             } else {
-                // إعادة تعيين الدوائر
-                document.querySelectorAll('.circle .points.marked')
-                    .forEach(point => point.classList.remove('marked'));
+                // إزالة النقاط المحددة
+                document.querySelectorAll('.circle').forEach(circle => {
+                    circle.innerHTML = ''; // تفريغ الدوائر لإعادة تهيئتها عند الدخول
+                });
 
                 // إعادة تعيين الخطوط
-                document.querySelectorAll('.skill-left .skill-bar .bar span')
-                    .forEach(bar => bar.style.width = '0');
+                document.querySelectorAll('.skill-left .skill-bar .bar span').forEach(bar => {
+                    bar.style.transition = 'none';
+                    bar.style.width = '0';
+                });
             }
         });
     }, { threshold: 0.5 });
@@ -182,7 +180,7 @@ if (skillsSection) {
     observer.observe(skillsSection);
 }
 
-// دالة لتحديث ترجمة المهارات المهنية عند تغيير اللغة
+// تحديث ترجمة المهارات المهنية
 function updateSkillsTranslation() {
     const skillsTranslation = {
         en: {
@@ -199,7 +197,7 @@ function updateSkillsTranslation() {
         }
     };
 
-    const currentLang = document.documentElement.lang || 'en'; // اللغة الحالية
+    const currentLang = document.documentElement.lang || 'en';
 
     document.querySelectorAll('.box .text small').forEach(elem => {
         const key = elem.getAttribute('data-translate')?.replace("skill-", "");
@@ -209,19 +207,12 @@ function updateSkillsTranslation() {
     });
 }
 
-// تحديث المهارات عند تغيير اللغة (لو عندك زر تغيير اللغة)
+// تحديث الترجمة عند تغيير اللغة
 document.querySelectorAll('.lang-switcher button').forEach(btn => {
     btn.addEventListener('click', () => {
-        setTimeout(updateSkillsTranslation, 300); // لتحديث المهارات بعد الترجمة
+        setTimeout(updateSkillsTranslation, 300);
     });
 });
-
-
-
-
-
-
-
 
 
 // فلترة المعرض

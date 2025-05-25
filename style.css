@@ -350,7 +350,7 @@ header {
    width: 120%;
    height: 120%;
    border-radius: 50%;
-   background: radial-gradient(circle, rgba(241, 196, 32, 0.6) 0%, rgba(0,0,0,0) 70%);
+   background: radial-gradient(circle, rgba(241, 196, 32, 0.6) 0%, rgba(0,0,0,0) 80%);
    animation: pulse-glow 3s infinite;
    z-index: 0;
 }
@@ -1303,3 +1303,4 @@ body[lang="ar"] #whatsapp-btn {
   width: 28px;
   height: 28px;
 }
+
