@@ -121,7 +121,61 @@ function markPointsSequentially(points, index = 0) {
     if (index >= points.length) return;
     points[index].classList.add('marked');
     requestAnimationFrame(() => {
-        setTimeout(() => markPointsSequentially(points, index + 1), 20);
+        setTimeout(() => markPointsSequentially(points, index + 1), 10);
+    });
+}
+
+function animateTechnicalBars() {
+    const bars = document.querySelectorAll('.skill-left .skill-bar .bar span');
+
+    const skillPercents = {
+        html: '72%',
+        css: '62%',
+        javascript: '80%',
+        figma: '90%'
+    };
+
+    bars.forEach(bar => {
+        const classList = Array.from(bar.classList);
+        const skillClass = classList.find(cls => cls !== '');
+        if (!skillClass) return;
+
+        const targetWidth = skillPercents[skillClass] || '0%';
+
+        bar.style.transition = 'none';
+        bar.style.width = '0';
+
+        requestAnimationFrame(() => {
+            bar.style.transition = 'width 2s ease';
+            bar.style.width = targetWidth;
+        });
+    });
+}
+function activateSkillCircles() {
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(elem => {
+        const dots = elem.getAttribute("data-dots");
+        const marked = elem.getAttribute("data-percent");
+        const percent = Math.floor(dots * marked / 100);
+        const rotate = 360 / dots;
+        let points = "";
+
+        for (let i = 0; i < dots; i++) {
+            points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+        }
+
+        elem.innerHTML = points;
+
+        const pointsMarked = elem.querySelectorAll('.points');
+        markPointsSequentially(Array.from(pointsMarked).slice(0, percent));
+    });
+}
+
+function markPointsSequentially(points, index = 0) {
+    if (index >= points.length) return;
+    points[index].classList.add('marked');
+    requestAnimationFrame(() => {
+        setTimeout(() => markPointsSequentially(points, index + 1), 10);
     });
 }
 
@@ -152,35 +206,109 @@ function animateTechnicalBars() {
     });
 }
 
-// مراقبة القسم وتفعيل/إعادة التهيئة عند الدخول والخروج
+// ✅ مراقبة دخول وخروج قسم المهارات
+// ✅ تفعيل دوائر المهارات بناءً على عدد النقاط ونسبة الإنجاز
+function activateSkillCircles() {
+    const circles = document.querySelectorAll('.circle');
+
+    circles.forEach(elem => {
+        const dots = elem.getAttribute("data-dots");      // إجمالي عدد النقاط في الدائرة
+        const marked = elem.getAttribute("data-percent"); // النسبة المئوية التي يجب تلوينها
+        const percent = Math.floor(dots * marked / 100);  // عدد النقاط المعلّمة فعليًا
+        const rotate = 360 / dots;                        // درجة الدوران لكل نقطة
+        let points = "";
+
+        // بناء جميع النقاط داخل الدائرة
+        for (let i = 0; i < dots; i++) {
+            points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
+        }
+
+        elem.innerHTML = points; // إدراج النقاط داخل العنصر
+
+        // تفعيل النقاط المعلّمة تدريجيًا
+        const pointsMarked = elem.querySelectorAll('.points');
+        markPointsSequentially(Array.from(pointsMarked).slice(0, percent));
+    });
+}
+
+// ✅ تلوين النقاط واحدة تلو الأخرى (مؤثر تدرّجي جميل)
+function markPointsSequentially(points, index = 0) {
+    if (index >= points.length) return;
+    points[index].classList.add('marked'); // تلوين النقطة
+    requestAnimationFrame(() => {
+        setTimeout(() => markPointsSequentially(points, index + 1), 10); // مؤثر تدريجي
+    });
+}
+
+// ✅ تحريك أشرطة المهارات التقنية (html, css, js...)
+function animateTechnicalBars() {
+    const bars = document.querySelectorAll('.skill-left .skill-bar .bar span');
+
+    // تعريف النسب لكل مهارة
+    const skillPercents = {
+        html: '72%',
+        css: '62%',
+        javascript: '80%',
+        figma: '90%'
+    };
+
+    bars.forEach(bar => {
+        const classList = Array.from(bar.classList);
+        const skillClass = classList.find(cls => cls !== '');
+        if (!skillClass) return;
+
+        const targetWidth = skillPercents[skillClass] || '0%';
+
+        // إعادة ضبط أولي
+        bar.style.transition = 'none';
+        bar.style.width = '0';
+
+        // تفعيل الحركة
+        requestAnimationFrame(() => {
+            bar.style.transition = 'width 6s ease';
+            bar.style.width = targetWidth;
+        });
+    });
+}
+
+// ✅ مراقبة دخول وخروج قسم المهارات لتفعيل/إعادة تعيين التأثيرات
 const skillsSection = document.querySelector('#skills');
 
 if (skillsSection) {
+    let isVisible = false; // حالة تتبع إن كان القسم ظاهرًا بالكامل أم لا
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                activateSkillCircles();     // ← الدوائر
-                animateTechnicalBars();     // ← الخطوط
-                updateSkillsTranslation();  // ← الترجمة
-            } else {
-                // إزالة النقاط المحددة
+            if (entry.isIntersecting && !isVisible) {
+                // 🟢 دخول القسم (تفعيله مرة واحدة فقط)
+                isVisible = true;
+                activateSkillCircles();
+                animateTechnicalBars();
+                updateSkillsTranslation(); // تحديث ترجمة الكلمات داخل الدوائر
+            } else if (!entry.isIntersecting && isVisible) {
+                // 🔴 الخروج الكامل من القسم (إعادة تعيين كل شيء)
+                isVisible = false;
+
+                // إعادة ضبط الدوائر (تفريغها)
                 document.querySelectorAll('.circle').forEach(circle => {
-                    circle.innerHTML = ''; // تفريغ الدوائر لإعادة تهيئتها عند الدخول
+                    circle.innerHTML = '';
                 });
 
-                // إعادة تعيين الخطوط
+                // إعادة تعيين أشرطة التقدم
                 document.querySelectorAll('.skill-left .skill-bar .bar span').forEach(bar => {
                     bar.style.transition = 'none';
                     bar.style.width = '0';
                 });
             }
         });
-    }, { threshold: 0.5 });
+    }, {
+        threshold: 0.2 // القسم يجب أن يكون ظاهرًا بنسبة 40% لتفعيل التأثير
+    });
 
-    observer.observe(skillsSection);
+    observer.observe(skillsSection); // تفعيل المراقبة على قسم المهارات
 }
 
-// تحديث ترجمة المهارات المهنية
+// ✅ ترجمة نصوص المهارات الشخصية حسب اللغة الحالية (العربية أو الإنجليزية)
 function updateSkillsTranslation() {
     const skillsTranslation = {
         en: {
@@ -207,13 +335,12 @@ function updateSkillsTranslation() {
     });
 }
 
-// تحديث الترجمة عند تغيير اللغة
+// ✅ تحديث الترجمة عند تغيير اللغة (عبر أزرار التبديل)
 document.querySelectorAll('.lang-switcher button').forEach(btn => {
     btn.addEventListener('click', () => {
-        setTimeout(updateSkillsTranslation, 300);
+        setTimeout(updateSkillsTranslation, 300); // تأخير بسيط للسماح بتبديل اللغة
     });
 });
-
 
 // فلترة المعرض
 var mixer = mixitup('.portfolio-gallery');

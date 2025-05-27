@@ -371,12 +371,12 @@ header {
 
 
 
+/*about section ---------------------------------------------------------------------------*/
 
-/* about section ---------------------------------------------------------------------------*/
 .about {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 2em;
   padding: 4rem 2rem;
@@ -386,13 +386,25 @@ header {
 .about .img-about {
   text-align: center;
   position: relative;
-  flex: 1 1 300px;
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about .img-about img {
-  max-width: 100%;
+  max-width: 280px;
+  width: 100%;
   height: auto;
   border-radius: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.img-about .info-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .info-about1,
@@ -400,37 +412,25 @@ header {
 .info-about3 {
   background: var(--bg-color);
   font-size: 0.6rem;
-  position: relative;
   padding: 10px;
   width: 90px;
   height: 90px;
   border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
-  display: inline-block;
-  margin: 10px 5px 0;
   box-shadow: var(--neon-box-shadow);
   border: 1px solid var(--hover-color);
   outline: 2px solid var(--bg-color);
   animation: morph 6s linear infinite;
   text-align: center;
   color: #fdfdfd;
-}
-
-.img-about span {
-  color: var(--hover-color);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.img-about .info-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-  gap: 10px;
 }
 
 .about-content {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
+  padding-top: 1rem;
 }
 
 .about-content span {
@@ -450,7 +450,7 @@ header {
 .about-content h3 {
   font-weight: 600;
   font-size: 1.5rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-content p {
@@ -480,10 +480,12 @@ header {
   background: var(--main-color);
 }
 
+/* الأجهزة الصغيرة (الهواتف) */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .about .img-about,
@@ -494,8 +496,65 @@ header {
   .about-content .btn-box {
     justify-content: center;
   }
+
+  .about-content {
+    padding-top: 0;
+  }
 }
 
+/* شاشات بين 768 و 853: اجعل الصورة تحت النص */
+@media (min-width: 768px) and (max-width: 853px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-content {
+    order: 1;
+  }
+
+  .about .img-about {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .about-content .btn-box {
+    justify-content: center;
+  }
+}
+
+/* شاشات صغيرة جدًا مثل 350px */
+@media (max-width: 400px) {
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-content h3 {
+    font-size: 1rem;
+  }
+
+  .about-content p {
+    font-size: 0.85rem;
+  }
+
+  .about .img-about img {
+    max-width: 220px;
+  }
+
+  .info-about1,
+  .info-about2,
+  .info-about3 {
+    width: 70px;
+    height: 70px;
+    font-size: 0.5rem;
+  }
+
+  .about-content,
+  .about {
+    text-align: center;
+  }
+}
 
 
 /* services section ---------------------------------------------------------------------------*/
@@ -607,6 +666,10 @@ header {
    box-sizing: border-box;   justify-content: center;
    align-items: center;
 
+ }
+
+ .main-text span{
+   color: #fdfdfd;
  }
  
  .skill-main {
