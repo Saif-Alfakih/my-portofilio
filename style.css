@@ -9,7 +9,7 @@
 }
 :root {
    --text-color: #E5E7EB; /* رمادي فاتح للنصوص */
-   --hover-color: #f1c420; /* أصفر ذهبي دافئ لجذب الانتباه */
+   --hover-color:#f1c420; /* أصفر ذهبي دافئ لجذب الانتباه */
    --bg-color: #1F2937; /* رمادي داكن أنيق للخلفية الرئيسية */
    --secon-bg-color: #4B5563; /* رمادي متوسط للأقسام الثانوية */
    --big-font: 2.5rem;
@@ -945,6 +945,45 @@ header {
    justify-content: center;
    width: 100%;
 }
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--main-color);
+}
+
+/* Google Map Container */
+.map-container {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .content form {
+    padding: 0 1rem;
+  }
+}
+
 
  /* footer  */
 

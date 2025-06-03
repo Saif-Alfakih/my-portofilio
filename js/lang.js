@@ -56,10 +56,10 @@
         "skill-problemsolving": "Problem Solving",
         "skill-time-management": "Time Management",
         "skill-creativity": "Creativity",
-        "skill-html": "HTML",
-        "skill-css": "CSS",
-        "skill-javascript": "JavaScript",
-        "skill-figma": "Figma",
+        "skill-html": "Computer",
+        "skill-css": "Programming",
+        "skill-javascript": "Data Analytics",
+        "skill-figma": "Data Security",
 
 
         // الأعمال
@@ -114,7 +114,7 @@
         "home-desc": "مرحباً بكم في ملفي الشخصي. أقدم حلولاً رقمية متكاملة تجمع بين الخبرة التقنية والرؤية الإبداعية لتحقيق نتائج استثنائية.",
         "email-label": "البريد الإلكتروني:",
         "behance-label": "بيهانس:",
-        "download-cv": "تحميل السيرة",
+        "download-cv": "تنزيل السيرة",
         "hire-me": "وظفني الآن",
         
         // قسم عني
@@ -131,7 +131,7 @@
         "services-title": "خدماتي",
         "services-subtitle": "حلول رقمية شاملة",
         "digital-marketing": "التسويق الرقمي",
-        "digital-marketing-desc": "استراتيجيات تسويق رقمي شاملة تشمل تحسين محركات البحث ووسائل التواصل الاجتماعي والتسويق بالمحتوى لتعزيز وجودك على الإنترنت.",
+        "digital-marketing-desc": "استراتيجيات تسويق رقمي تشمل تحليل وادارة صفحات السوشيال ميديد ووسائل التواصل الاجتماعي والتسويق بالمحتوى لتعزيز وجودك على الانترنت.",
         "web-programming": "برمجة الويب",
         "web-programming-desc": "خدمات تطوير ويب مخصصة باستخدام التقنيات الحديثة لبناء مواقع ويب متجاوبة وديناميكية.",
         "network-solutions": "حلول الشبكات",
@@ -139,13 +139,13 @@
         "data-analysis": "تحليل البيانات",
         "data-analysis-desc": "تحويل البيانات الخام إلى رؤى قابلة للتنفيذ باستخدام أدوات وتقنيات التحليل المتقدمة.",
         "graphic-design": "التصميم الجرافيكي",
-        "graphic-design-desc": "حلول بصرية إبداعية للعلامات التجارية ومواد التسويق والوسائط الرقمية.",
+        "graphic-design-desc": "بناء علامة تجارية متكاملة وهوية بصرية تعكس الخدمات او المنتجات التي تقدمها من شعارات ومنشورات ",
         
         // المهارات
-        "skill-html": "إتش تي إم إل",
-        "skill-css": "سي إس إس",
-        "skill-javascript": "جافا سكريبت",
-        "skill-figma": "فيجما",
+        "skill-html": "حاسوب",
+        "skill-css": "برمجة",
+        "skill-javascript": "تحليل اليانات",
+        "skill-figma": "أمن المعلومات",
         "skill-teamwork": "العمل الجماعي",
         "skill-problemsolving": "حل المشكلات",
         "skill-time-management": "إدارة الوقت",

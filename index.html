@@ -57,11 +57,12 @@
         <a href="https://www.behance.net/SaifAlaslam-Al-fakih" class="btn" target="_blank" rel="noopener" data-translate="hire-me" aria-label="Hire Me Now">Hire Me Now</a>
       </div>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/saif-alaslam-a-7ba988232?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIEi7B8NnSPOdqX%2Fp2L0D0A%3D%3D" target="_blank" ><i class='bx bxl-linkedin-square'></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100078298180422" target="_blank" ><i class='bx bxl-facebook-square'></i></a>
-        <a href="https://wa.me/967778384862" target="_blank" ><i class='bx bxl-whatsapp-square'></i></a>
-        <a href="mailto:saifalfakih452@gmail.com" aria-label="Send email to Saif"><i class='bx bxl-gmail'></i></a>
-      </div>
+    <a href="https://wa.me/967778384862" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:saifalfakih452@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100078298180422" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/saif-alaslam-a-7ba988232" target="_blank"><i class="fab fa-linkedin"></i></a>
+  
+  </div>
     </div>
     <div class="home-image scroll-scale">
   <div class="img-wrapper">
@@ -329,29 +330,50 @@
     </div>
   </section>
   </section>
+
+
+  
 <!-- Contact Section -->
 <section id="contact" class="content">
   <div class="main-text scroll-scale">
-    <span data-translate="contact-subtitle">ask me question</span>
+    <span data-translate="contact-subtitle">Get in touch</span>
     <h2 data-translate="contact-title">Contact Me</h2>
   </div>
 
   <form id="contact-form" action="https://formspree.io/f/xgvkpoej" method="POST" class="scroll-scale">
-    <input type="text" name="name" placeholder="Your Name" required data-translate-placeholder="name-placeholder">
-    <input type="email" name="email" placeholder="Your Email" required data-translate-placeholder="email-placeholder">
-    <input type="text" name="address" placeholder="Your Address" data-translate-placeholder="address-placeholder">
-    <input type="text" name="phone" placeholder="Your Phone Number" data-translate-placeholder="phone-placeholder">
-    <textarea name="message" cols="30" rows="10" placeholder="Your message" required data-translate-placeholder="message-placeholder"></textarea>
-    
+    <input type="text" name="name" required data-translate-placeholder="name-placeholder" placeholder="Your Name">
+    <input type="email" name="email" required data-translate-placeholder="email-placeholder" placeholder="Your Email">
+    <input type="text" name="address" data-translate-placeholder="address-placeholder" placeholder="Your Address">
+    <input type="text" name="phone" data-translate-placeholder="phone-placeholder" placeholder="Your Phone">
+    <textarea name="message" rows="6" required data-translate-placeholder="message-placeholder" placeholder="Your Message"></textarea>
+
     <div class="btn-box formBtn">
       <button type="submit" class="btn" data-translate="send-message">Send Message</button>
     </div>
-    
-    <p id="form-status" style="margin-top: 15px; color: green;"></p>
-    <div id="form-message" class="form-message" style="display: none;" data-translate="form-success">
+
+    <p id="form-status"></p>
+    <div id="form-message" class="form-message" data-translate="form-success" style="display: none;">
       Message sent successfully!
     </div>
   </form>
+
+ <!-- Social Icons -->
+<div class="social-icons">
+  <a href="https://wa.me/967778384862" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="mailto:saifalfakih452@gmail.com"><i class="fas fa-envelope"></i></a>
+  <a href="https://facebook.com/profile.php?id=100078298180422" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.linkedin.com/in/saif-alaslam-a-7ba988232" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_LINK"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </section>
 
 <!-- Footer -->

@@ -418,14 +418,12 @@ const footerObserver = new IntersectionObserver((entries) => {
 
 footerObserver.observe(footer);
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const messageBox = document.getElementById("form-message");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const formData = new FormData(form);
 
     fetch(form.action, {
@@ -449,17 +447,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function showMessage() {
     const currentLang = document.documentElement.lang || "en";
     const successMessage = translations[currentLang]["form-success"];
-
     messageBox.textContent = successMessage;
     messageBox.style.display = "block";
+    messageBox.style.color = "green";
 
     setTimeout(() => {
       messageBox.style.display = "none";
     }, 5000);
   }
 });
-
-
 
 
 document.addEventListener("languageChanged", () => {
