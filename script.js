@@ -446,16 +446,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showMessage() {
     const currentLang = document.documentElement.lang || "en";
-    const successMessage = translations[currentLang]["form-success"];
+    const successMessage = translations[currentLang]?.["form-success"] || "Message sent successfully!";
     messageBox.textContent = successMessage;
     messageBox.style.display = "block";
-    messageBox.style.color = "green";
+    messageBox.style.color = "#00ffae";
 
     setTimeout(() => {
       messageBox.style.display = "none";
     }, 5000);
   }
 });
+
 
 
 document.addEventListener("languageChanged", () => {

@@ -332,56 +332,35 @@
   </section>
 
 
-  
-<!-- Contact Section -->
-<section id="contact" class="content">
-  <div class="main-text scroll-scale">
-    <span data-translate="contact-subtitle">Get in touch</span>
-    <h2 data-translate="contact-title">Contact Me</h2>
-  </div>
-
-  <form id="contact-form" action="https://formspree.io/f/xgvkpoej" method="POST" class="scroll-scale">
-    <input type="text" name="name" required data-translate-placeholder="name-placeholder" placeholder="Your Name">
-    <input type="email" name="email" required data-translate-placeholder="email-placeholder" placeholder="Your Email">
-    <input type="text" name="address" data-translate-placeholder="address-placeholder" placeholder="Your Address">
-    <input type="text" name="phone" data-translate-placeholder="phone-placeholder" placeholder="Your Phone">
-    <textarea name="message" rows="6" required data-translate-placeholder="message-placeholder" placeholder="Your Message"></textarea>
-
-    <div class="btn-box formBtn">
-      <button type="submit" class="btn" data-translate="send-message">Send Message</button>
+ <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2 data-translate="contact-title">Contact Me</h2>
+      <p data-translate="contact-subtitle">Get in touch</p>
     </div>
 
-    <p id="form-status"></p>
-    <div id="form-message" class="form-message" data-translate="form-success" style="display: none;">
-      Message sent successfully!
+    <form id="contact-form" action="https://formspree.io/f/xgvkpoej" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" required placeholder="Your Name" data-translate-placeholder="name-placeholder">
+        <input type="email" name="email" required placeholder="Your Email" data-translate-placeholder="email-placeholder">
+      </div>
+      <input type="text" name="phone" placeholder="Your Phone" data-translate-placeholder="phone-placeholder">
+      <textarea name="message" rows="5" required placeholder="Your Message" data-translate-placeholder="message-placeholder"></textarea>
+      <button type="submit" class="send-btn" data-translate="send-message">Send Message</button>
+
+      <div id="form-message" class="form-message" style="display: none;" data-translate="form-success">
+        Message sent successfully!
+      </div>
+    </form>
+
+    <div class="contact-info">
+      <div><i class="fas fa-map-marker-alt"></i> Yemen, Sana'a</div>
+      <div><i class="fas fa-envelope"></i> <a href="mailto:saifalfakih452@gmail.com">saifalfakih452@gmail.com</a></div>
+      <div><i class="fab fa-whatsapp"></i> <a href="https://wa.me/967778384862" target="_blank">+967 778 384 862</a></div>
     </div>
-  </form>
-
- <!-- Social Icons -->
-<div class="social-icons">
-  <a href="https://wa.me/967778384862" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <a href="mailto:saifalfakih452@gmail.com"><i class="fas fa-envelope"></i></a>
-  <a href="https://facebook.com/profile.php?id=100078298180422" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://www.linkedin.com/in/saif-alaslam-a-7ba988232" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
-
-
-  <!-- Google Map -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_LINK"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
   </div>
 </section>
-
-<!-- Footer -->
-<footer id="footer">
-  <p class="scroll-scale">&copy; <span id="current-year"></span> Saif Alaslam Alfakih.
-    <span data-translate="copyright">All rights reserved</span>.
-  </p>
-</footer>
 
 <!-- زر الرجوع لأعلى -->
 <a href="#home" class="scroll-top" id="scrollTopBtn" aria-label="Back to Top">
