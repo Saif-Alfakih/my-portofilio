@@ -14,11 +14,11 @@
         // الصفحة الرئيسية
         "home-title": "Hi, I'm Saif Alaslam Alfakih",
         "home-subtitle": "I specialize in",
-        "home-words": ["Digital Marketing", "Web Programming", "Network", "Data Analysis", "Graphic Design"],
+        "home-words": ["Digital Marketing", "","Graphic Design"],
         "home-desc": "Welcome to my professional portfolio. I offer integrated digital solutions combining technical expertise with creative vision to deliver exceptional results.",
         "email-label": "Email:",
         "behance-label": "Behance:",
-        "download-cv": "Download CV",
+        "download-cv": "My Resume",
         "hire-me": "Hire Me Now",
         
         // قسم عني
@@ -57,8 +57,8 @@
         "skill-time-management": "Time Management",
         "skill-creativity": "Creativity",
         "skill-html": "Computer",
-        "skill-css": "Programming",
-        "skill-javascript": "Data Analytics",
+        "skill-css": "E-commerce Store Management",
+        "skill-javascript": "Web Development",
         "skill-figma": "Data Security",
 
 
@@ -109,8 +109,8 @@
         
         // الصفحة الرئيسية
         "home-title": "مرحباً، أنا سيف الاسلام الفقيه",
-        "home-subtitle": " متخصص في",
-        "home-words": ["التسويق الرقمي", "برمجة الويب", "الشبكات", "تحليل البيانات", "التصميم الجرافيكي"],
+        "home-subtitle": " اخصائي ",
+        "home-words": ["تسويق رقمي", "تصاميم جرافيك"],
         "home-desc": "مرحباً بكم في ملفي الشخصي. أقدم حلولاً رقمية متكاملة تجمع بين الخبرة التقنية والرؤية الإبداعية لتحقيق نتائج استثنائية.",
         "email-label": "البريد الإلكتروني:",
         "behance-label": "بيهانس:",
@@ -142,9 +142,9 @@
         "graphic-design-desc": "بناء علامة تجارية متكاملة وهوية بصرية تعكس الخدمات او المنتجات التي تقدمها من شعارات ومنشورات ",
         
         // المهارات
-        "skill-html": "حاسوب",
-        "skill-css": "برمجة",
-        "skill-javascript": "تحليل اليانات",
+        "skill-html": "كمبيوتر",
+        "skill-css": "ادارة المتاجر الإلكترونية",
+        "skill-javascript": " تطوير مواقع الويب",
         "skill-figma": "أمن المعلومات",
         "skill-teamwork": "العمل الجماعي",
         "skill-problemsolving": "حل المشكلات",
