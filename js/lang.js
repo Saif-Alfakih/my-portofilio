@@ -30,6 +30,7 @@
         "years-exp": "years of experience",
         "projects-completed": "projects completed",
         "happy-clients": "satisfied clients",
+        "contact-me": "Contact me",
         
         // الخدمات
         "services-title": "My Services",
@@ -125,7 +126,9 @@
         "read-more": "المزيد",
         "years-exp": "سنوات خبرة",
         "projects-completed": "مشروع مكتمل",
-        "happy-clients": "عميل راضٍ",
+        "happy-clients": "عميل راضٍ",        
+        "contact-me": "تواصل بي",
+
         
         // الخدمات
         "services-title": "خدماتي",

@@ -288,7 +288,7 @@ header {
    width: 50px;
    height: 50px; /* تأكد من أن الارتفاع يساوي عرض الأيقونة */
    background: var(--bg-color);
-   color: var(--hover-color);
+   color: var(--text-color);
    box-shadow: 0 0 0.3rem var(--hover-color);
    border-radius: 50%; /* يمكن استخدام دائرية للخلفية */
    position: relative; /* جعل العنصر يحتوي على الوضع النسبي */
@@ -531,7 +531,6 @@ header {
    font-weight: 700;
 }
 
-/* ======= Services Section ======= */
 .services-section {
    display: flex;
    justify-content: center;
@@ -571,7 +570,7 @@ header {
    display: flex;
    align-items: center;
    justify-content: center;
-   font-size: 2rem;
+   font-size: 3.5rem;
    color: var(--hover-color);
    box-shadow: 0 0 12px rgba(241, 196, 32, 0.6);
    transition: transform 0.3s ease, color 0.3s ease;
@@ -752,119 +751,116 @@ header {
     animation-delay: calc(var(--i) * 0.05s);
  }
 
-/* PORTFOLIO Section ----------------------------------------------------- */
+
+ /* Portfolio Section */
 .fillter-buttons {
-   margin: 2rem;
-   text-align: center;
- }
- 
- .fillter-buttons .button {
-   background: none;
-   outline: none;
-   border: none;
-   cursor: pointer;
-   font-size: 0.85rem;
-   font-weight: 600;
-   letter-spacing: .4px;
-   margin-left: 1.3rem;
-   color: var(--text-color);
- }
- 
- .fillter-buttons .button:hover {
-   color: var(--hover-color);
- }
- 
- .portfolio-gallery {
-   width: 100%;
-   max-width: 1920px;
-   margin: 0 auto;
-   padding-left: 4vw;
-   padding-right: 4vw;
-   box-sizing: border-box;
-   display: grid;
-   grid-template-columns: repeat(auto-fill , minmax(260px , 1fr)); 
-   gap: 2vw;
-   padding: 0;
- }
- 
- .port-box {
-   position: relative;
-   border-radius: 15px;
-   overflow: hidden;
-   background: #292e33;
-   display: flex;
-   grid-template-rows: 1fr auto;
-   align-items: center;
-   border: 2px solid var(--hover-color);
-   box-shadow: var(--neon-box-shadow);
- }
- 
- .port-image{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100%;
-   width: 100%;
- }
+  margin: 2rem auto;
+  text-align: center;
+}
 
- .port-image img{
-   width: 100%;
-   opacity: .5;
-   height: 100%;
-   transition: .5s;
- }
- .port-content{
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   opacity: 0; 
-   background: linear-gradient(rgba(0,0,0,.2), #12f7ff);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   text-align: center;
-   transition: 0.5s;
-   padding: 0 2rem;
- }
+.fillter-buttons .button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.5rem 1rem;
+  color: var(--text-color);
+  padding: 0.4rem 0.8rem;
+  transition: 0.3s ease;
+  border-radius: 8px;
+}
 
- .port-box:hover .port-content{
-   opacity: 1;
- }
+.fillter-buttons .button:hover {
+  background-color: var(--hover-color);
+  color: var(--bg-color);
+}
 
-  .port-box:hover .port-image img{
-   transform: scale(1.1);
-  }
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 4vw;
+  box-sizing: border-box;
+}
 
+.port-box {
+  background-color: #292e33;
+  border: 2px solid var(--hover-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--neon-box-shadow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
 
- .port-content p{
-   font-size: .8rem;
-   margin: 5px 0 15px 0;
- }
+.port-box:hover {
+  transform: scale(1.02);
+}
 
- .port-content a{
-   background: #fff;
-   border-radius: 50%;
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   width: 40px;
-   height: 40px;
-   border: 1px solid var(--hover-color);
-   outline: 2px solid #fff; 
- }
+.port-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* مربع */
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
 
- .port-content a i{
-   font-size: 1.3rem;
-   color: var(--secon-bg-color);
- }
+.port-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
 
+.port-box:hover .port-image img {
+  transform: scale(1.05);
+}
 
+.port-content {
+  padding: 1.2rem;
+  background: linear-gradient(to bottom, #111a, #12f7ff22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.port-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--hover-color);
+}
 
+.port-content p {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
 
+.port-content a {
+  background: #fff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--hover-color);
+  transition: background 0.3s ease;
+}
+
+.port-content a:hover {
+  background: var(--hover-color);
+}
+
+.port-content a i {
+  color: var(--secon-bg-color);
+  font-size: 1.3rem;
+}
 
  
 
@@ -1088,6 +1084,23 @@ body[lang="ar"] .scroll-top {
   right: auto;
 }
 
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #0f2027; /* نفس لون الخلفية السفلي لو أردت */
+  color: #ffffffcc;
+  font-size: 0.875rem;
+  border-top: 1px solid #ffffff22;
+  margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.75rem;
+    padding: 0.8rem 0;
+  }
+}
 
 
 
@@ -1310,11 +1323,10 @@ body.nav-open::after {
       height: auto;
       width: 300px;
    }
-
-}
+  }
 .language-toggle {
   position: fixed;
-  bottom: 20px;
+  bottom: 100px; /* رفعه فوق الفوتر */
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -1337,10 +1349,6 @@ body.nav-open::after {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.lang-icon {
-  font-size: 18px;
-}
-
 html[dir="ltr"] .language-toggle {
   right: 20px;
   left: auto;
@@ -1355,7 +1363,7 @@ html[dir="rtl"] .language-toggle {
   .language-toggle {
     font-size: 14px;
     padding: 8px 16px;
-    bottom: 15px;
+    bottom: 95px; /* رفع أكثر للشاشات الصغيرة */
   }
 
   html[dir="ltr"] .language-toggle {
@@ -1586,25 +1594,11 @@ html[dir="rtl"] .language-toggle {
 
 .contact-float-btn:hover {
   transform: scale(1.1);
-}
-#whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  z-index: 9999;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
 
+/* زر الواتساب */
 #whatsapp-btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 160px; /* رفعه فوق زر الترجمة */
   z-index: 9999;
   width: 56px;
   height: 56px;
@@ -1620,7 +1614,16 @@ html[dir="rtl"] .language-toggle {
   border: none;
 }
 
-/* تغيير مكان الزر حسب اللغة */
+#whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+#whatsapp-btn img {
+  width: 28px;
+  height: 28px;
+}
+
 body[lang="en"] #whatsapp-btn {
   right: 20px;
   left: auto;
@@ -1631,17 +1634,25 @@ body[lang="ar"] #whatsapp-btn {
   right: auto;
 }
 
-#whatsapp-btn:hover {
+/* زر الرجوع لأعلى */
+.scroll-top {
+  position: fixed;
+  bottom: 40px; /* أسفل الأزرار الأخرى، ولكن لا يلامس الفوتر */
+  right: 20px;
+  z-index: 999;
+  background: #f1c420;
+  color: #000;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.scroll-top:hover {
   transform: scale(1.1);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
-
-/* صورة الأيقونة داخل الزر */
-#whatsapp-btn img {
-  width: 28px;
-  height: 28px;
-}
-
 /* الرسوم المتحركة للتوهج */
 @keyframes pulse-glow {
   0% {
@@ -1659,3 +1670,19 @@ body[lang="ar"] #whatsapp-btn {
 }
 
 
+.site-footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #ccc;
+  background-color: transparent;
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 12px;
+    padding-bottom: 80px; /* حتى لا تغطيها الأزرار */
+  }
+}
+}

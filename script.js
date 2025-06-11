@@ -341,19 +341,18 @@ document.querySelectorAll('.lang-switcher button').forEach(btn => {
         setTimeout(updateSkillsTranslation, 300); // تأخير بسيط للسماح بتبديل اللغة
     });
 });
-
-// فلترة المعرض
+// تفعيل الفلترة
 var mixer = mixitup('.portfolio-gallery');
 
-// القائمة النشطة
-let menu = document.querySelectorAll('.header ul li a'); // تم تصحيح اسم المتغير هنا
-let sections = document.querySelectorAll('section'); // تم تصحيح اسم المتغير هنا
+// تفعيل القائمة النشطة أثناء التمرير
+let menu = document.querySelectorAll('.header ul li a');
+let sections = document.querySelectorAll('section');
 
 function activeMenu() {
-    let len = sections.length;
-    while(--len && window.scrollY + 97 < sections[len].offsetTop) {}
-    menu.forEach(sec => sec.classList.remove("active"));
-    if(menu[len]) menu[len].classList.add("active");
+  let len = sections.length;
+  while (--len && window.scrollY + 97 < sections[len].offsetTop) {}
+  menu.forEach(sec => sec.classList.remove("active"));
+  if (menu[len]) menu[len].classList.add("active");
 }
 
 activeMenu();
