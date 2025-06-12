@@ -415,7 +415,6 @@ const footerObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 
-footerObserver.observe(footer);
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
@@ -470,5 +469,3 @@ document.addEventListener("languageChanged", () => {
         imgWrapper.classList.add("animate-profile");
     }, 50);
 });
-
-

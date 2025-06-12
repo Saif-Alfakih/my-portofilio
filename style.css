@@ -1377,8 +1377,8 @@ html[dir="rtl"] .language-toggle {
 
 .contact-float-btn {
   position: fixed;
-  bottom: 20px;
-  padding: 15px;
+  bottom: 20px;  
+  padding: 7px;
   font-size: 22px;
   border-radius: 50%;
   background-color: #25D366;
@@ -1582,7 +1582,7 @@ html[dir="rtl"] .language-toggle {
 .contact-float-btn {
   position: fixed;
   bottom: 20px;
-  padding: 15px;
+  padding: 7px;
   font-size: 22px;
   border-radius: 50%;
   background-color: #25D366;
@@ -1595,44 +1595,6 @@ html[dir="rtl"] .language-toggle {
 .contact-float-btn:hover {
   transform: scale(1.1);
 
-/* زر الواتساب */
-#whatsapp-btn {
-  position: fixed;
-  bottom: 160px; /* رفعه فوق زر الترجمة */
-  z-index: 9999;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-}
-
-#whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-}
-
-#whatsapp-btn img {
-  width: 28px;
-  height: 28px;
-}
-
-body[lang="en"] #whatsapp-btn {
-  right: 20px;
-  left: auto;
-}
-
-body[lang="ar"] #whatsapp-btn {
-  left: 20px;
-  right: auto;
-}
 
 /* زر الرجوع لأعلى */
 .scroll-top {

@@ -97,7 +97,7 @@
 
 
         // حقوق النشر
-        "copyright": "All rights reserved"
+        "footer-text": "© 2025 Saif Alaslam Alfakih. All rights reserved."
     },
     "ar": {
         // التنقل
@@ -191,7 +191,8 @@
         "send-message": "إرسال الرسالة",
         "form-success": "تم إرسال الرسالة بنجاح!",
         // حقوق النشر
-        "copyright": "جميع الحقوق محفوظة"
+        "footer-text": "© 2025 سيف الإسلام الفقيه. جميع الحقوق محفوظة."
+        
     }
 };
 
@@ -262,6 +263,3 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAnimatedWords(translations[currentLang]["home-words"]);
     }
 });
-
-  document.body.setAttribute("lang", lang);
-
