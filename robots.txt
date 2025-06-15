@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://saifalfakih.github.io/sitemap.xml
+
+Sitemap: https://saif-alfakih.github.io/my-portofilio/sitemap.xml
