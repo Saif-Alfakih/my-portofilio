@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://saifalfakih.github.io/sitemap.xml
