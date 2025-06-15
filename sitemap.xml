@@ -10,6 +10,7 @@
   </url>
 
   <!-- من أنا -->
+  <!-- ملاحظة: روابط #anchor تُشير لأقسام داخل نفس الصفحة ولن تُفهرس كصفحات منفصلة -->
   <url>
     <loc>https://saif-alfakih.github.io/my-portofilio/#about</loc>
     <lastmod>2025-06-15</lastmod>
