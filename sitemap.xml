@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://saif-alfakih.github.io/my-portofilio/</loc>
     <lastmod>2025-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- من أنا -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#about</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- الخدمات -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#services</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المهارات -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#skills</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- الأعمال -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#portfolio</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- التواصل -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#contact</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
