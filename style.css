@@ -113,7 +113,7 @@ header.sticky{
     display:none
 }
 section{
-    padding: 150px 10%
+    padding:150px 10%
 }
 .home{
     min-height:100vh;
@@ -1150,4 +1150,3 @@ html[dir=ltr] .language-toggle{
         padding-bottom:80px
     }
 }
-
