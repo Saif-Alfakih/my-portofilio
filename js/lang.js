@@ -97,7 +97,9 @@
 
 
         // حقوق النشر
-        "footer-text": "© 2025 Saif Alaslam Alfakih. All rights reserved."
+        "footer-text": "© 2025 Saif Alaslam Alfakih. All rights reserved.",   
+        "nav-blog": "Blog",
+
     },
     "ar": {
         // التنقل
@@ -191,7 +193,10 @@
         "send-message": "إرسال الرسالة",
         "form-success": "تم إرسال الرسالة بنجاح!",
         // حقوق النشر
-        "footer-text": "© 2025 سيف الإسلام الفقيه.جميع الحقوق محفوظة."
+        "footer-text": "© 2025 سيف الإسلام الفقيه.جميع الحقوق محفوظة.",            
+        "nav-blog": "مدونة",
+
+
         
     }
 };

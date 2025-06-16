@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مدونة سيف الفقيه | مقالات تسويق وتصميم وبرمجة</title>
+  <meta name="description" content="اقرأ مقالات حصرية كتبها سيف الفقيه عن التسويق الرقمي، التصميم، تطوير الويب، وتحسين محركات البحث.">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --text-color:#E5E7EB;
+      --hover-color:#f1c420;
+      --bg-color:#1F2937;
+      --secon-bg-color:#4B5563;
+      --big-font:2.5rem;
+      --normal-font:2rem;
+      --neon-box-shadow:0 0 0.5rem #f1c420;
+      --h2-font:3rem;
+      --font-neon-text-shadow:0 0 10px rgba(241, 196, 32, 0.6),0 0 20px rgba(241, 196, 32, 0.5),0 0 30px rgba(241, 196, 32, 0.4),0 0 40px rgba(241, 196, 32, 0.3),0 0 70px rgba(241, 196, 32, 0.25),0 0 80px rgba(241, 196, 32, 0.2),0 0 100px rgba(241, 196, 32, 0.15),0 0 150px rgba(241, 196, 32, 0.1);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Cairo", sans-serif;
+      margin: 90px;
+      padding: 0;
+    }
+
+    header nav {
+      background-color: var(--secon-bg-color);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--text-color);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      color: var(--hover-color);
+    }
+
+    .blog-container {
+      padding: 3rem 4vw;
+    }
+
+    .blog-title {
+      text-align: center;
+      font-size: var(--h2-font);
+      color: var(--text-color);
+    }
+
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .post-card {
+      background-color: #292e33;
+      border: 2px solid var(--hover-color);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+
+    .post-card:hover {
+      transform: scale(1.02);
+    }
+
+    .post-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+
+    .post-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .post-card h2 {
+      font-size: 1.2rem;
+      color: var(--hover-color);
+      padding: 1rem;
+      margin: 0;
+    }
+
+    .post-card p {
+      font-size: 0.9rem;
+      color: var(--text-color);
+      padding: 0 1rem 1rem;
+      margin: 0;
+    }
+
+    .read-more {
+      margin: 0 1rem 1rem;
+      align-self: flex-start;
+      background-color: transparent;
+      border: 2px solid var(--hover-color);
+      color: var(--hover-color);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .read-more:hover {
+      background-color: var(--hover-color);
+      color: #1F2937;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--secon-bg-color);
+      color: var(--text-color);
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="blog.html" class="active">المدونة</a>
+    </nav>
+  </header>
+
+  <main class="blog-container">
+    <h1 class="blog-title">📚 مقالات ومشاركات المدونة</h1>
+
+    <section class="blog-posts">
+      <!-- مقالة 1 -->
+      <div class="post-card">
+        <h2>5 خطوات لبناء علامة تجارية رقمية قوية</h2>
+        <div class="post-image">
+          <img src="images/photoshopblog.webp" alt="علامة تجارية" loading="lazy">
+        </div>
+        <p>تعرف على الأساسيات التي يجب أن تعتمد عليها لتأسيس هوية رقمية ناجحة في سوق تنافسي.</p>
+        <a href="article1.html" class="read-more">اقرأ المزيد</a>
+      </div>
+
+      <!-- مقالة 2 -->
+      <div class="post-card">
+        <h2>ما الفرق بين UI و UX؟</h2>
+        <div class="post-image">
+          <img src="images/ui-vs-ux.webp" alt="UI و UX" loading="lazy">
+        </div>
+        <p>إذا كنت مصممًا، فلا بد أن تعرف الفرق بين تصميم واجهة المستخدم وتجربة المستخدم.</p>
+        <a href="article2.html" class="read-more">اقرأ المزيد</a>
+      </div>
+
+      <!-- مقالة 3 -->
+      <div class="post-card">
+        <h2>كيف تبدأ في التسويق الرقمي: خطوات للمبتدئين</h2>
+        <div class="post-image">
+          <img src="images/marketingblog.webp" alt="التسويق الرقمي" loading="lazy">
+        </div>
+        <p>دليل شامل لكل من يريد الدخول إلى عالم التسويق الرقمي بخطوات واضحة وبسيطة.</p>
+        <a href="article3.html" class="read-more">اقرأ المزيد</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 سيف الإسلام الفقيه - جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>
