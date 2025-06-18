@@ -12,7 +12,7 @@
         "nav-contact": "Contact",
         
         // الصفحة الرئيسية
-        "home-title": "Hi, I'm Saif Alaslam Alfakih",
+        "home-title": "Hi, I'm Saif Alfakih",
         "home-subtitle": "I specialize in",
         "home-words": ["Digital Marketing", "","Graphic Design"],
         "home-desc": "Welcome to my professional portfolio. I offer integrated digital solutions combining technical expertise with creative vision to deliver exceptional results.",
@@ -111,7 +111,7 @@
         "nav-contact": "اتصل بي",
         
         // الصفحة الرئيسية
-        "home-title": "مرحباً، أنا سيف الاسلام الفقيه",
+        "home-title": "مرحباً، أنا سيف الفقيه",
         "home-subtitle": " اخصائي ",
         "home-words": ["تسويق رقمي", "تصاميم جرافيك"],
         "home-desc": "مرحباً بكم في ملفي الشخصي. أقدم حلولاً رقمية متكاملة تجمع بين الخبرة التقنية والرؤية الإبداعية لتحقيق نتائج استثنائية.",
