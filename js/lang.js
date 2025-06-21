@@ -27,9 +27,9 @@
         "about-subtitle": "Multidisciplinary professional with expertise in digital solutions",
         "about-desc": "With over 3 years of experience in digital fields, I combine technical skills with strategic thinking to deliver comprehensive solutions. My approach focuses on understanding client needs and transforming them into effective digital strategies.",
         "read-more": "Read More",
-        "years-exp": "years of experience",
-        "projects-completed": "projects completed",
-        "happy-clients": "satisfied clients",
+        "about-experience": "Workplaces",
+        "about-certificates": "Certificates Earned",
+        "about-languages": "Languages Spoken",
         "contact-me": "Contact me",
         
         // الخدمات
@@ -125,10 +125,9 @@
         "about-title": "معلومات عني",
         "about-subtitle": "محترف متعدد التخصصات في الحلول الرقمية",
         "about-desc": "بخبرة تزيد عن 3 سنوات في المجالات الرقمية، أجمع بين المهارات التقنية والتفكير الاستراتيجي لتقديم حلول شاملة. يركز أسلوبي على فهم احتياجات العملاء وتحويلها إلى استراتيجيات رقمية فعالة.",
-        "read-more": "المزيد",
-        "years-exp": "سنوات خبرة",
-        "projects-completed": "مشروع مكتمل",
-        "happy-clients": "عميل راضٍ",        
+        "about-experience": "أماكن عمل",
+        "about-certificates": "شهادة مكتسبة",
+        "about-languages": "لغات أتحدث بها",
         "contact-me": "تواصل بي",
 
         
