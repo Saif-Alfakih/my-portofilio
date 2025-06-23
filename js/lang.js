@@ -1,6 +1,3 @@
-// ملف الترجمات (js/lang.js)
-
-// js/lang.js
     const translations = {
     "en": {
         // التنقل
@@ -10,7 +7,6 @@
         "nav-skills": "Skills",
         "nav-portfolio": "Portfolio",
         "nav-contact": "Contact",
-        
         // الصفحة الرئيسية
         "home-title": "Hi, I'm Saif Alfakih",
         "home-subtitle": "I specialize in",
@@ -20,7 +16,6 @@
         "behance-label": "Behance:",
         "download-cv": "My Resume",
         "hire-me": "Hire Me Now",
-        
         // قسم عني
         "about-intro": "Let me introduce myself",
         "about-title": "About Me",
@@ -31,7 +26,6 @@
         "about-certificates": "Certificates Earned",
         "about-languages": "Languages Spoken",
         "contact-me": "Contact me",
-        
         // الخدمات
         "services-title": "My Services",
         "services-subtitle": "Comprehensive digital solutions",
@@ -45,10 +39,7 @@
         "data-analysis-desc": "Transforming raw data into actionable insights using advanced analytics tools and techniques.",
         "graphic-design": "Graphic Design",
         "graphic-design-desc": "Creative visual solutions for branding, marketing materials, and digital media.",
-        
         // المهارات
-    
- 
         "skills-title": "My Skills",
         "skills-subtitle": "Technical and Professional",
         "skills-technical": "Technical Skills",
@@ -61,8 +52,6 @@
         "skill-css": "E-commerce Store Management",
         "skill-javascript": "Web Development",
         "skill-figma": "Data Security",
-
-
         // الأعمال
         "portfolio-title": "My Portfolio",
         "portfolio-subtitle": "Recent Professional Projects",
@@ -81,9 +70,8 @@
         "project4-desc": "Social media designs for Al-Hajj Import and Export Company",
         "project5-title": "Coffee Market",
         "project5-desc": "Coffee cup post design",
-        "project6-title": "Dashboard Design",
-        "project6-desc": "Interactive data visualization dashboard",
-
+        "project6-title": "World Discount For Shoes",
+        "project6-desc": "Social media designs for World Discount For Shoes",
         // قسم التواصل   
         "contact-title": "Contact Me",
         "contact-subtitle": "Get in touch",
@@ -94,12 +82,9 @@
         "message-placeholder": "Your Message",
         "send-message": "Send Message",
         "form-success": "Message sent successfully!",
-
-
         // حقوق النشر
         "footer-text": "© 2025 Saif Alaslam Alfakih. All rights reserved.",   
         "nav-blog": "Blog",
-
     },
     "ar": {
         // التنقل
@@ -109,7 +94,6 @@
         "nav-skills": "المهارات",
         "nav-portfolio": "الأعمال",
         "nav-contact": "اتصل بي",
-        
         // الصفحة الرئيسية
         "home-title": "مرحباً، أنا سيف الفقيه",
         "home-subtitle": " اخصائي ",
@@ -119,7 +103,6 @@
         "behance-label": "بيهانس:",
         "download-cv": "تنزيل السيرة",
         "hire-me": "وظفني الآن",
-        
         // قسم عني
         "about-intro": "دعني أقدم نفسي",
         "about-title": "معلومات عني",
@@ -129,8 +112,6 @@
         "about-certificates": "شهادة مكتسبة",
         "about-languages": "لغات أتحدث بها",
         "contact-me": "تواصل بي",
-
-        
         // الخدمات
         "services-title": "خدماتي",
         "services-subtitle": "حلول رقمية شاملة",
@@ -144,7 +125,6 @@
         "data-analysis-desc": "تحويل البيانات الخام إلى رؤى قابلة للتنفيذ باستخدام أدوات وتقنيات التحليل المتقدمة.",
         "graphic-design": "التصميم الجرافيكي",
         "graphic-design-desc": "بناء علامة تجارية متكاملة وهوية بصرية تعكس الخدمات او المنتجات التي تقدمها من شعارات ومنشورات ",
-        
         // المهارات
         "skill-html": "كمبيوتر",
         "skill-css": "ادارة المتاجر الإلكترونية",
@@ -158,8 +138,6 @@
         "skills-subtitle": "الكفاءات التقنية والمهنية",
         "skills-technical": "المهارات التقنية",
         "skills-professional": "المهارات المهنية",
-
-        
         // الأعمال
         "portfolio-title": "أعمالي",
         "portfolio-subtitle": "مشاريع احترافية حديثة",
@@ -178,9 +156,8 @@
         "project4-desc": "تصاميم سوشيال ميديا لشركة الحاج للاستيراد والتصدير ",
         "project5-title": "سوق القهوة",
         "project5-desc": "تصميم منشور كوب قهوة",
-        "project6-title": "تصميم لوحة تحكم",
-        "project6-desc": "لوحة تصور بيانات تفاعلية",
-        
+        "project6-title": "عالم التخفيضات للاحذية",
+        "project6-desc": "تصاميم سوشيال ميديا لعالم التخفيضات للاحذية",
         // التواصل
         "contact-title": "اتصل بي",
         "contact-subtitle": "ابقى على تواصل",
@@ -194,39 +171,27 @@
         // حقوق النشر
         "footer-text": "© 2025 سيف الإسلام الفقيه.جميع الحقوق محفوظة.",            
         "nav-blog": "مدونة",
-
-
-        
     }
 };
-
-
    let currentLang = document.documentElement.lang || 'en';
-
 function applyTranslations() {
-    // ترجمة النصوص داخل العناصر التي تحمل data-translate
     document.querySelectorAll('[data-translate]').forEach(el => {
         const key = el.getAttribute('data-translate');
         if (translations[currentLang] && translations[currentLang][key]) {
             el.textContent = translations[currentLang][key];
         }
     });
-
-    // ترجمة الـ placeholders داخل العناصر التي تحمل data-translate-placeholder
     document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
         const key = el.getAttribute('data-translate-placeholder');
         if (translations[currentLang] && translations[currentLang][key]) {
             el.placeholder = translations[currentLang][key];
         }
     });
-
-    // تحديث زر تبديل اللغة
     const langToggleBtn = document.getElementById('language-toggle');
     if (langToggleBtn) {
         langToggleBtn.textContent = currentLang === 'en' ? 'العربية' : 'English';
     }
 }
-
 function updateDirection() {
     document.documentElement.lang = currentLang;
     document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
@@ -235,34 +200,26 @@ function updateDirection() {
     document.body.classList.toggle('rtl', currentLang === 'ar');
     document.body.classList.toggle('ltr', currentLang !== 'ar');
 }
-
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'ar' : 'en';
     localStorage.setItem('preferredLang', currentLang);
     applyTranslations();
     updateDirection();
-
-    // تحديث الكلمات المتحركة عند تغيير اللغة إن وجدت
     if (typeof updateAnimatedWords === 'function') {
         updateAnimatedWords(translations[currentLang]["home-words"]);
     }
 }
-
-// التهيئة الأولية عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang');
     if (savedLang) {
         currentLang = savedLang;
     }
-
     const langToggleBtn = document.getElementById('language-toggle');
     if (langToggleBtn) {
         langToggleBtn.addEventListener('click', toggleLanguage);
     }
-
     applyTranslations();
     updateDirection();
-
     if (typeof updateAnimatedWords === 'function') {
         updateAnimatedWords(translations[currentLang]["home-words"]);
     }

@@ -1151,3 +1151,6 @@ html[dir=ltr] .language-toggle{
     }
 }
 
+.metricool-tracker {
+  display: none;
+}

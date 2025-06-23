@@ -9,12 +9,29 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- About Section -->
   <url>
-    <loc>https://saif-alfakih.blogspot.com/</loc>
-    <lastmod>2025-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#about</loc>
   </url>
- 
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#services</loc>
+  </url>
+
+  <!-- Skills Section -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#skills</loc>
+  </url>
+
+  <!-- Portfolio Section -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#portfolio</loc>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://saif-alfakih.github.io/my-portofilio/#contact</loc>
+  </url>
 
 </urlset>
